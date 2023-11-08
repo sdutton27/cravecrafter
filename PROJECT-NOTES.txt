@@ -54,3 +54,8 @@ SIMON:
     git pull origin main
 
 =========
+
+Tutorials:
+
+    To make a mono-repo with React/Django:
+    https://awstip.com/harnessing-the-synergy-of-django-and-react-in-monorepo-projects-f40701ce86ce
