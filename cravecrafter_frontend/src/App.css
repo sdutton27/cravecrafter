@@ -1,0 +1,12 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+.logo {
+    text-decoration: none;
+    color: #FCFBFA;
+    font-size: 32px;
+    font-family: 'Kanit';
+    font-weight: 500;
+}
