@@ -1,6 +1,6 @@
 import React from 'react'
-import foody from '../assets/foody.jpg'
-import grubhub from '../assets/grubhub.png'
+import foody from '../../assets/images/foody.jpg'
+import grubhub from '../../assets/images/grubhub.png'
 
 import { FcGoogle } from "react-icons/fc";
 

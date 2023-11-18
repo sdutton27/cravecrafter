@@ -1,6 +1,6 @@
 import React from 'react'
 
-import food from '../assets/food.jpg'
+import food from '../../assets/images/food.jpg'
 
 export const Login = () => {
   return (
