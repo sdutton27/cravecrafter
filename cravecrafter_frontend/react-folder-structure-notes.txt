@@ -1,0 +1,70 @@
+From video: https://www.youtube.com/watch?v=UUga4-z7b6s
+Junior vs Senior React Folder Structure - How To Organize React Projects
+
+Basic Structure:
+src/
+	__tests__/
+		components/
+		hooks/
+	^ USUALLY WE WANT TESTS ACTUALLY NEXT TO EACH OTHER
+	components/
+	hooks/
+
+
+Intermediate Structure:
+	assets/
+		- contains global CSS, images, SVGs
+	components/
+		SHARED components
+		- things like presentational components (don't have state)
+		form/	
+		ui/
+		- Navbar.js
+	context/
+		__tests__/
+		AuthContext.js
+		- any context files
+	data/
+		- for any JSON data you have, or constants
+	hooks/
+		- same as before, but text
+	pages/
+		Home/
+			index.js
+			SettingsContext.js
+			SettingsForm.js
+			- Anything else that only that page uses, even utility functions and such
+		Login/
+		Settings/
+		Signup/
+	utils/
+		- any utility functions like formatCurrency.js or formatDate.js, you want simple functions like peer functions (the same input will always produce the same output)
+
+Advanced Version:
+	assets/
+	components/
+	context/
+	data/
+	features/
+		- authentication/
+			- assets/
+			- components/
+			- hooks/
+			- services/
+			- index.js
+				^ only ever import from index.js
+		- projects/
+		- settings/
+		- todos /
+	hooks/
+		- only for global hooks, like localStorage hook
+	layouts/
+		- specifically for things used for laying out (Navbar, Sidebar, PageContainer)
+	lib/
+		- fetch.js, axios; Facade Pattern= take a library and wrap it in your own code that exposes the code in your own way. Makes working with large scale apps even better
+	pages/
+		- no longer have folders, just Home.js, Login.js, etc
+	services/
+		- integrating with an API (analytics, etc.)
+	utils/
+	
