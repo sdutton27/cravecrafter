@@ -3,10 +3,22 @@
     padding: 0;
   }
 
-.logo {
+/* .logo {
     text-decoration: none;
     color: #FCFBFA;
     font-size: 32px;
     font-family: 'Kanit';
     font-weight: 500;
+} */
+
+.footer-label {
+  text-decoration: underline;
+}
+
+.footer-text {
+  text-align: center;
+  color: #FCFBFA;
+  font-size: 14px;
+  font-family: 'Epilogue';
+  font-weight: 500;
 }

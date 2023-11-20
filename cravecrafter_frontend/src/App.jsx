@@ -1,9 +1,10 @@
-import './App.css';
+import './assets/css/App.css';
 import { Routes, Route } from 'react-router-dom';
-import Home from './views/Home/Home';
 import Navbar from './components/Navbar/Navbar';
-import { Signin } from './views/Signin/Signin';
-import { Login } from './views/Login/Login';
+import Home from './pages/Home/Home';
+import { Signin } from './pages/Signin/Signin';
+import { Login } from './pages/Login/Login';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Route path="/login" element={<Login />} />
       <Route path="/signin" element={<Signin />} />
     </Routes>
+    <Footer />
     </>
   );
 }
