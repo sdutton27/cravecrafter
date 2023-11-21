@@ -5,7 +5,7 @@ import linkedin from '../../assets/images/linkedin.png'
 
 export default function Footer() {
     return (
-        <div style={{ backgroundColor: 'black' }}>
+        <footer style={{ backgroundColor: 'black', position:"absolute", width:"100%" }} className="footer">
             <img src={logo} className="w-48 ml-3 py-3 sm:ml-10 md:ml-20" />
             <div className="flex flex-col pb-4 sm:grid grid-cols-4 gap-1">
                 <div>
@@ -56,6 +56,6 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
-        </div>
+        </footer>
     )
 }
