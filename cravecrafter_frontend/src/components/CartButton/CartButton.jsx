@@ -21,7 +21,7 @@ export default function CartButton({classes}) {
                         borderRadius: 28, 
                         justifyContent: 'center', 
                         alignItems: 'center', gap: 10, display: 'inline-flex',
-                        border: 0, margin: "5px 0px"}}>
+                        border: 0}}>
             <Cart />
             <div style={{ textAlign: 'center', color: '#FCFBFA', fontSize: 16, 
                         fontFamily: 'Kanit', fontWeight: '500', 

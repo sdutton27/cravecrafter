@@ -40,7 +40,7 @@ export default function Navbar() {
           </Link>
         )}
       </div>
-      <div id="right-nav" style={{ display: "flex" }} className="flex flex-wrap md:flex-nowrap">
+      <div id="right-nav" style={{ display: "flex", alignItems: "center" }} className="flex flex-wrap md:flex-nowrap">
         {location === '' ? (
           <Scroll.Link to="about" spy={true} smooth={true} duration={500}
             className="nav-link cursor-pointer" style={{ color: "#FCFBFA" }}>
@@ -52,9 +52,9 @@ export default function Navbar() {
             About</Scroll.Link>
         )}
         <Link to="/favorites" className="nav-link" style={{ color: (location === '' ? "#FCFBFA" : "#050312") }}>Favorites</Link>
-        <SurpriseOrderButton classes="mt-[5px] h-12 px-5" />
-        <CartButton classes="mt-[5px] h-12 px-5" />
-        <ProfileButton classes="mt-[5px] h-12 w-12" />
+        <SurpriseOrderButton classes=" h-10 px-5" />
+        <CartButton classes="h-10 px-5" />
+        <ProfileButton classes="h-10 w-10" />
       </div>
     </div>
   )

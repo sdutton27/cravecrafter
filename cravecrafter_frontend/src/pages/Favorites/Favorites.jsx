@@ -5,6 +5,8 @@ import FavoriteRestaurant from '../../components/FavoriteRestaurant/FavoriteRest
 import testRestaurant from '../../assets/images/test-restaurant.jpeg'
 import FavoriteEntree from '../../components/FavoriteEntree/FavoriteEntree';
 
+import { Link } from 'react-router-dom';
+
 export default function Favorites() {
     //for the time being
     const firstName = "Michael";
@@ -27,10 +29,11 @@ export default function Favorites() {
                 <div style={{ display: "flex", flexDirection: "row", width: "100%", alignItems: "center", marginRight: "auto" }}>
                     <h3 className="text-2xl">Favorite Restaurants</h3>
                     {/* This link will route to the Favorite Restaurants page */}
-                    <a style={{
+                    <Link to="/favorites/restaurants"
+                    style={{
                         marginLeft: "auto", color: 'black', fontFamily: 'Epilogue',
                         fontWeight: '500', textDecoration: 'underline'
-                    }}>View All</a>
+                    }}>View All</Link>
                 </div>
                 <div style={{ overflowX: "auto", width: "100%" }} className="flex flex-column gap-6 mt-3">
                     <FavoriteRestaurant name={"Applebee's"} imgLink={testRestaurant} numFavorites={2} isOpen={true}/>

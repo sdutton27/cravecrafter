@@ -11,7 +11,7 @@ export default function Footer() {
                 <div>
                     <img src={linkedin} className="ml-3 w-8 sm:ml-10 md:ml-20" alt="LinkedIn"/>
                 </div>
-                <div style={{textAlign:"center"}}>
+                <div>
                     <span className="footer-text footer-label">Product Management</span>
                     <br/>
                     <div style={{whiteSpace: "nowrap", display:"inline-block"}}>
@@ -22,7 +22,7 @@ export default function Footer() {
                     </div>
                     
                 </div>
-                <div style={{textAlign:"center"}}>
+                <div>
                     <span className="footer-text footer-label">Software Development</span>
                     <br/>
                     <div style={{whiteSpace: "nowrap", display:"inline-block"}}>
@@ -42,7 +42,7 @@ export default function Footer() {
                     </a>
                     </div>
                 </div>
-                <div style={{textAlign:"center"}}>
+                <div>
                     <span className="footer-text footer-label">Product Design</span>
                     <br/>
                     <div style={{whiteSpace: "nowrap", display:"inline-block"}}>
