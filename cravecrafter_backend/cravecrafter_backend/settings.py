@@ -36,7 +36,7 @@ CORS_ORIGIN_WHITELIST = [
 
 # For deployment
 ALLOWED_HOSTS = [
-    'cravecrafter-production.up.railway.app', '127.0.0.1', 
+    'cravecrafter-production.up.railway.app', '127.0.0.1', 'localhost',
     #'http://localhost:3000'
 ]
 
