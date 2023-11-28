@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { ReactComponent as Search } from '../../assets/images/search.svg'
 import FavoriteRestaurant from '../../components/FavoriteRestaurant/FavoriteRestaurant';
 
@@ -8,6 +8,39 @@ import FavoriteEntree from '../../components/FavoriteEntree/FavoriteEntree';
 import { Link } from 'react-router-dom';
 
 export default function Favorites() {
+    const [favoriteRestaurants, setFavoriteRestaurants] = useState([]);
+
+    const getFavoriteRestaurants = async () => {
+        try {
+            const res = await fetch('http://localhost:8000/api/restaurants/');
+            const restaurantList = await res.json();
+            // this.setState({
+            //   todoList
+            // });
+            setFavoriteRestaurants(restaurantList)
+            console.log(restaurantList)
+          } catch (e) {
+            console.log(e);
+        }
+    }
+
+    const showFavoriteRestaurants = () => {
+        console.log("showing favorite restaurants")
+        console.log(favoriteRestaurants[0])
+        console.log(favoriteRestaurants.length)
+        return favoriteRestaurants.map((restaurant, i)=>(
+            <FavoriteRestaurant name={restaurant.name} imgLink={restaurant.img_url} numFavorites={1} isOpen={true}/>
+        ))
+    }
+
+    useEffect(()=>{
+        getFavoriteRestaurants();
+    },[])
+
+    // useEffect(()=>{
+    //     showFavoriteRestaurants();
+    // },[favoriteRestaurants])
+
     //for the time being
     const firstName = "Michael";
     return (
@@ -36,20 +69,22 @@ export default function Favorites() {
                     }}>View All</Link>
                 </div>
                 <div style={{ overflowX: "auto", width: "100%" }} className="flex flex-column gap-6 mt-3">
-                    <FavoriteRestaurant name={"Applebee's"} imgLink={testRestaurant} numFavorites={2} isOpen={true}/>
+                    {/* {favoriteRestaurants ? showFavoriteRestaurants() : <></>} */}
+                    {showFavoriteRestaurants()}
+                    {/* <FavoriteRestaurant name={"Applebee's"} imgLink={testRestaurant} numFavorites={2} isOpen={true}/>
                     <FavoriteRestaurant name={"Papa John's"} imgLink={testRestaurant} numFavorites={2} isOpen={false}/>
                     <FavoriteRestaurant name={"Pollo Tropical"} imgLink={testRestaurant} numFavorites={2} isOpen={true}/>
-                    <FavoriteRestaurant name={"McDonald's"} imgLink={testRestaurant} numFavorites={2} isOpen={false}/>
+                    <FavoriteRestaurant name={"McDonald's"} imgLink={testRestaurant} numFavorites={2} isOpen={false}/> */}
                 </div>
             </div>
             <div className="my-10 px-4 sm:px-8 md:px-14" style={{ overflow: "hidden" }}>
                 <div style={{ display: "flex", flexDirection: "row", width: "100%", alignItems: "center", marginRight: "auto" }}>
                     <h3 className="text-2xl">Favorite Entrees</h3>
                     {/* This link will route to the Favorite Entrees page */}
-                    <a style={{
+                    <Link style={{
                         marginLeft: "auto", color: 'black', fontFamily: 'Epilogue',
                         fontWeight: '500', textDecoration: 'underline'
-                    }}>View All</a>
+                    }}>View All</Link>
                 </div>
                 <div style={{ overflowX: "auto", width: "100%" }} className="flex flex-column gap-6 mt-3">
                     <FavoriteEntree name={"El Pollo"} imgLink={testRestaurant} restaurant={"Jalapenos Mexican Restaurant"} price={"$14.99"} isOpen={true}/>

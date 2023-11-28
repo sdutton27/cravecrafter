@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
-import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,16 +19,22 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-o2(e!t41(m$fo#9^2nqw6w(c#t$e&xf2z0bhev0lb&4@-&q4^4'
+# # SECURITY WARNING: keep the secret key used in production secret!
+# SECRET_KEY = 'django-insecure-u&3-&u^xa7(-gzl9)k%5$0xo@jp)62#^+a!0x*gn!00+c(!y&a'
+import os
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-u&3-&u^xa7(-gzl9)k%5$0xo@jp)62#^+a!0x*gn!00+c(!y&a')
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# DEBUG = True
+DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
+
+# ADDED FOR CORS:
+CORS_ORIGIN_WHITELIST = [
+    'http://localhost:3000',
+]
 
 ALLOWED_HOSTS = []
-
-# NOTE THIS IS BECAUSE WE HAVE NOT HOSTED THINGS YET
-CORS_ORIGIN_ALLOW_ALL = True
 
 
 # Application definition
@@ -41,12 +46,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework', #previously installed
-    'corsheaders', #previously installed
-    'database', # Database
+    'api.apps.ApiConfig', # added for api/ app
+    'corsheaders', # CORS
+    'rest_framework', # REST framework
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -54,18 +60,15 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'corsheaders.middleware.CorsMiddleware', # applies CORS logic
-    'django.middleware.common.CommonMiddleware', #applies CORS logic
 ]
 
 ROOT_URLCONF = 'cravecrafter_backend.urls'
 
-# WE SWITCHED 'APP_DIRS': True, to FALSE FOR MONOREPO
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [],
-        'APP_DIRS': False,
+        'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
@@ -126,17 +129,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
-
-# for monorepo
-STATICFILES_DIRS = [os.path.join(BASE_DIR, "../../cravecrafter_frontend/build/static")]
-
-# 
-WEBPACK_LOADER = {
-    'DEFAULT': {
-        'BUNDLE_DIR_NAME': 'static/',
-        'STATS_FILE': os.path.join(BASE_DIR, "../../cravecrafter_frontend/build/asset-manifest.json"),
-    }
-}
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

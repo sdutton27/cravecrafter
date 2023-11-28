@@ -4,9 +4,9 @@ import React from 'react'
 export default function FavoriteRestaurant({name, imgLink, numFavorites, isOpen}) {
   return (
     <div style={{flexShrink:"0"}}>
-        <img src={imgLink} alt="image for restaurant" 
-        className="h-48"
-        style={{borderRadius:"12px", objectFit:"contain", opacity: isOpen ? 1 : .5 }}/>
+        <img src={imgLink} alt="restaurant" 
+        className="h-48 w-80"
+        style={{borderRadius:"12px", objectFit:"cover", opacity: isOpen ? 1 : .5 }}/>
         <h3>{name}</h3>
         <h4 className="text-xs">{numFavorites} Favorited entrees</h4>
         <h4 className="text-xs"

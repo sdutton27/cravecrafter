@@ -1,0 +1,1359 @@
+{
+    "menu_info": {
+      "currency": "USD",
+      "sections": [
+        "1_sandwich",
+        "5_drinks"
+      ],
+      "header_media": null,
+      "logo_media": null,
+      "search_media": null
+    },
+    "tax_rates": [
+      {
+        "external_id": "feb124cea788f2d582bd40b188ffce1c",
+        "name": "Tax rate feb124cea788f2d582bd40b188ffce1c",
+        "rate": 0.06
+      },
+      {
+        "external_id": "e737c3b7a4c99675212fd1d50e6d945b",
+        "name": "Tax rate e737c3b7a4c99675212fd1d50e6d945b",
+        "rate": 0.0525
+      },
+      {
+        "external_id": "1e89f83ca9c996b33fe10a907322c2e0",
+        "name": "Tax rate 1e89f83ca9c996b33fe10a907322c2e0",
+        "rate": 0.0725
+      },
+      {
+        "external_id": "37d5c0b6b354bc3c790d2696b42756c9",
+        "name": "Tax rate 37d5c0b6b354bc3c790d2696b42756c9",
+        "rate": 0.08
+      }
+    ],
+    "repeating_schedules": [],
+    "menu_sections": [
+      {
+        "external_id": "1_sandwich",
+        "name": "Sandwiches",
+        "internal_name": "Sandwiches",
+        "description": "These are delicious!",
+        "items": [
+          "1_sandwich|100_pbj_sandwich",
+          "1_sandwich|40006_basket_of_breadsticks"
+        ],
+        "availability_ranges": [],
+        "schedule_ids": [],
+        "availability_override": null,
+        "media": null,
+        "tax_category": {
+          "code": "100020"
+        }
+      },
+      {
+        "external_id": "5_drinks",
+        "name": "Drinks",
+        "internal_name": "Drinks",
+        "description": "Great drinks for you enjoy on the go",
+        "items": [
+          "5_drinks|coffee",
+          "5_drinks|smoothie",
+          "5_drinks|fountain_drink",
+          "5_drinks|san_pellegrino_sparking_natural_mineral_water"
+        ],
+        "availability_ranges": [],
+        "schedule_ids": [],
+        "availability_override": null,
+        "media": null
+      }
+    ],
+    "items": [
+      {
+        "external_id": "1_sandwich|100_pbj_sandwich",
+        "name": "PBJ Sandwich",
+        "internal_name": "PBJ Sandwich",
+        "description": "Delicious Peanut Butter and Jelly Sandwich",
+        "price": 0,
+        "tax_rate": "feb124cea788f2d582bd40b188ffce1c",
+        "miscellaneous_taxes": [],
+        "size_prompt": null,
+        "modifier_prompts": [
+          "1_sandwich|100_pbj_sandwich|uid_opt_pbj_size",
+          "1_sandwich|100_pbj_sandwich|uid_opt_grilled_toppings_large",
+          "1_sandwich|100_pbj_sandwich|spreads_pbj"
+        ],
+        "schedule_ids": [],
+        "tags": [],
+        "minimum_order_quantity": null,
+        "maximum_order_quantity": null,
+        "calorie_content": null,
+        "media": {
+          "source_url": "https://example.com/348863390-1.jpg"
+        },
+        "metadata": "{\"order_ahead_menu_id\":48630}",
+        "availability_ranges": [],
+        "allowable_order_types": [
+          "standard"
+        ],
+        "availability_override": null,
+        "tax_category": {
+          "code": "100021"
+        }
+      },
+      {
+        "external_id": "1_sandwich|40006_basket_of_breadsticks",
+        "name": "Basket of Breadsticks",
+        "internal_name": "Basket of Breadsticks",
+        "description": "Shareable size of breadsticks",
+        "price": 3,
+        "tax_rate": "feb124cea788f2d582bd40b188ffce1c",
+        "miscellaneous_taxes": [],
+        "size_prompt": null,
+        "modifier_prompts": [],
+        "schedule_ids": [],
+        "tags": [],
+        "minimum_order_quantity": 1,
+        "maximum_order_quantity": 50,
+        "calorie_content": null,
+        "media": {
+          "source_url": "https://dreamdinners.com/theme/dreamdinners/images/recipe/default/745.jpg"
+        },
+        "metadata": "{\"order_ahead_menu_id\":48630}",
+        "availability_ranges": [],
+        "allowable_order_types": [
+          "standard"
+        ],
+        "availability_override": null
+      },
+      {
+        "external_id": "5_drinks|coffee",
+        "name": "Coffee",
+        "internal_name": "Coffee",
+        "description": "Delicious coffee",
+        "price": 4,
+        "tax_rate": "feb124cea788f2d582bd40b188ffce1c",
+        "miscellaneous_taxes": [],
+        "size_prompt": null,
+        "modifier_prompts": [
+          "5_drinks|coffee|uid_opt_coffee_size",
+          "5_drinks|coffee|opt_coffee_topping",
+          "5_drinks|coffee|opt_coffee_milk"
+        ],
+        "schedule_ids": [],
+        "tags": [],
+        "minimum_order_quantity": null,
+        "maximum_order_quantity": null,
+        "calorie_content": null,
+        "media": {
+          "source_url": "https://https://example.com/5473ca2.jpg"
+        },
+        "metadata": "{\"order_ahead_menu_id\":48630}",
+        "availability_ranges": [],
+        "allowable_order_types": [
+          "standard"
+        ],
+        "availability_override": null
+      },
+      {
+        "external_id": "5_drinks|smoothie",
+        "name": "Smoothie",
+        "internal_name": "Smoothie",
+        "description": "Delicious smoothie",
+        "price": 3,
+        "tax_rate": "feb124cea788f2d582bd40b188ffce1c",
+        "miscellaneous_taxes": [],
+        "size_prompt": null,
+        "modifier_prompts": [
+          "5_drinks|smoothie|uid_opt_coffee_size",
+          "5_drinks|smoothie|opt_smoothie_topping"
+        ],
+        "schedule_ids": [],
+        "tags": [],
+        "minimum_order_quantity": null,
+        "maximum_order_quantity": null,
+        "calorie_content": null,
+        "media": {
+          "source_url": "https://example.com/09dc1a2bbb542310071.png"
+        },
+        "metadata": "{\"order_ahead_menu_id\":48630}",
+        "availability_ranges": [],
+        "allowable_order_types": [
+          "standard"
+        ],
+        "availability_override": null
+      },
+      {
+        "external_id": "5_drinks|fountain_drink",
+        "name": "Fountain Drink",
+        "internal_name": "Fountain Drink",
+        "description": "Pick your size and soda",
+        "price": 3,
+        "tax_rate": "feb124cea788f2d582bd40b188ffce1c",
+        "miscellaneous_taxes": [],
+        "size_prompt": null,
+        "modifier_prompts": [
+          "5_drinks|fountain_drink|drink_selection"
+        ],
+        "schedule_ids": [],
+        "tags": [],
+        "minimum_order_quantity": null,
+        "maximum_order_quantity": null,
+        "calorie_content": null,
+        "media": {
+          "source_url": "https://example.com/1231231.png"
+        },
+        "metadata": "{\"order_ahead_menu_id\":48630}",
+        "availability_ranges": [],
+        "allowable_order_types": [
+          "standard"
+        ],
+        "availability_override": null
+      },
+      {
+        "external_id": "5_drinks|san_pellegrino_sparking_natural_mineral_water",
+        "name": "San Pellegrino Sparkling Natural Mineral Water",
+        "internal_name": "San Pellegrino Sparkling Natural Mineral Water",
+        "description": "S.Pellegrino is a carbonated natural mineral water rich in minerals.",
+        "price": 4,
+        "tax_rate": "feb124cea788f2d582bd40b188ffce1c",
+        "miscellaneous_taxes": [],
+        "size_prompt": null,
+        "modifier_prompts": [],
+        "schedule_ids": [],
+        "tags": [],
+        "minimum_order_quantity": null,
+        "maximum_order_quantity": null,
+        "calorie_content": null,
+        "media": {
+          "source_url": "https://example.com/12312.jpg"
+        },
+        "metadata": "{\"order_ahead_menu_id\":48630}",
+        "availability_ranges": [],
+        "allowable_order_types": [
+          "standard"
+        ],
+        "availability_override": null,
+        "gtin": "041508802185"
+      }
+    ],
+    "modifier_prompts": [
+      {
+        "external_id": "1_sandwich|100_pbj_sandwich|uid_opt_pbj_size",
+        "name": "Size",
+        "internal_name": "Size",
+        "modifier_list": "1_sandwich|100_pbj_sandwich|uid_opt_pbj_size|modifier_list",
+        "default_selection_model": {
+          "minimum_quantity": 1,
+          "maximum_quantity": 1
+        },
+        "display_settings": null,
+        "modifier_prompt_quantity_settings": {
+          "minimum_units": 1,
+          "maximum_units": 1
+        },
+        "modifier_quantity_settings": {
+          "1_sandwich|100_pbj_sandwich|uid_opt_pbj_size|10_pbj_small": {
+            "default_units": 0,
+            "maximum_units": 1,
+            "unit_increment": 1
+          },
+          "1_sandwich|100_pbj_sandwich|uid_opt_pbj_size|30_pbj_large": {
+            "default_units": 0,
+            "maximum_units": 1,
+            "unit_increment": 1
+          },
+          "1_sandwich|100_pbj_sandwich|uid_opt_pbj_size|20_pbj_medium": {
+            "default_units": 0,
+            "maximum_units": 1,
+            "unit_increment": 1
+          }
+        },
+        "defaulted_modifiers": [],
+        "modifier_prompt_free_settings": null
+      },
+      {
+        "external_id": "1_sandwich|100_pbj_sandwich|uid_opt_grilled_toppings_large|10_cheese_opt_grilled_toppings_large|cheese_type",
+        "name": "Type of Cheese",
+        "internal_name": "Type of Cheese",
+        "modifier_list": "1_sandwich|100_pbj_sandwich|uid_opt_grilled_toppings_large|10_cheese_opt_grilled_toppings_large|cheese_type|modifier_list",
+        "default_selection_model": {
+          "minimum_quantity": 1,
+          "maximum_quantity": 1
+        },
+        "display_settings": null,
+        "modifier_prompt_quantity_settings": {
+          "minimum_units": 1,
+          "maximum_units": 1
+        },
+        "modifier_quantity_settings": {
+          "1_sandwich|100_pbj_sandwich|uid_opt_grilled_toppings_large|10_cheese_opt_grilled_toppings_large|cheese_type|cheese_cheddar": {
+            "default_units": 1,
+            "maximum_units": 1,
+            "unit_increment": 1
+          },
+          "1_sandwich|100_pbj_sandwich|uid_opt_grilled_toppings_large|10_cheese_opt_grilled_toppings_large|cheese_type|cheese_american": {
+            "default_units": 0,
+            "maximum_units": 1,
+            "unit_increment": 1
+          },
+          "1_sandwich|100_pbj_sandwich|uid_opt_grilled_toppings_large|10_cheese_opt_grilled_toppings_large|cheese_type|cheese_provolone": {
+            "default_units": 0,
+            "maximum_units": 1,
+            "unit_increment": 1
+          }
+        },
+        "defaulted_modifiers": [
+          "1_sandwich|100_pbj_sandwich|uid_opt_grilled_toppings_large|10_cheese_opt_grilled_toppings_large|cheese_type|cheese_cheddar"
+        ],
+        "modifier_prompt_free_settings": null
+      },
+      {
+        "external_id": "1_sandwich|100_pbj_sandwich|uid_opt_grilled_toppings_large",
+        "name": "Toppings",
+        "internal_name": "Toppings",
+        "modifier_list": "1_sandwich|100_pbj_sandwich|uid_opt_grilled_toppings_large|modifier_list",
+        "default_selection_model": {
+          "minimum_quantity": 0,
+          "maximum_quantity": 3
+        },
+        "display_settings": null,
+        "modifier_prompt_quantity_settings": {
+          "minimum_units": 0,
+          "maximum_units": 3
+        },
+        "modifier_quantity_settings": {
+          "1_sandwich|100_pbj_sandwich|uid_opt_grilled_toppings_large|30_bacon_opt_grilled_toppings_large": {
+            "default_units": 0,
+            "maximum_units": 1,
+            "unit_increment": 1
+          },
+          "1_sandwich|100_pbj_sandwich|uid_opt_grilled_toppings_large|10_cheese_opt_grilled_toppings_large": {
+            "default_units": 0,
+            "maximum_units": 1,
+            "unit_increment": 1
+          },
+          "1_sandwich|100_pbj_sandwich|uid_opt_grilled_toppings_large|20_butter_opt_grilled_toppings_large": {
+            "default_units": 0,
+            "maximum_units": 1,
+            "unit_increment": 1
+          }
+        },
+        "defaulted_modifiers": [],
+        "modifier_prompt_free_settings": null
+      },
+      {
+        "external_id": "1_sandwich|100_pbj_sandwich|spreads_pbj",
+        "name": "Spreads",
+        "internal_name": "Spreads",
+        "modifier_list": "1_sandwich|100_pbj_sandwich|spreads_pbj|modifier_list",
+        "default_selection_model": {
+          "minimum_quantity": 0,
+          "maximum_quantity": 2
+        },
+        "display_settings": null,
+        "modifier_prompt_quantity_settings": {
+          "minimum_units": 0
+        },
+        "modifier_quantity_settings": {
+          "1_sandwich|100_pbj_sandwich|spreads_pbj|jelly": {
+            "default_units": 1,
+            "maximum_units": 1,
+            "unit_increment": 1
+          },
+          "1_sandwich|100_pbj_sandwich|spreads_pbj|peanut_butter": {
+            "default_units": 1,
+            "maximum_units": 1,
+            "unit_increment": 1
+          }
+        },
+        "defaulted_modifiers": [
+          "1_sandwich|100_pbj_sandwich|spreads_pbj|peanut_butter",
+          "1_sandwich|100_pbj_sandwich|spreads_pbj|jelly"
+        ],
+        "modifier_prompt_free_settings": null
+      },
+      {
+        "external_id": "5_drinks|coffee|uid_opt_coffee_size",
+        "name": "Choose a Size",
+        "internal_name": "Choose a Size",
+        "modifier_list": "5_drinks|coffee|uid_opt_coffee_size|modifier_list",
+        "default_selection_model": {
+          "minimum_quantity": 1,
+          "maximum_quantity": 1
+        },
+        "display_settings": null,
+        "modifier_prompt_quantity_settings": {
+          "minimum_units": 1,
+          "maximum_units": 1
+        },
+        "modifier_quantity_settings": {
+          "5_drinks|coffee|uid_opt_coffee_size|large": {
+            "default_units": 0,
+            "maximum_units": 1,
+            "unit_increment": 1
+          },
+          "5_drinks|coffee|uid_opt_coffee_size|small": {
+            "default_units": 0,
+            "maximum_units": 1,
+            "unit_increment": 1
+          },
+          "5_drinks|coffee|uid_opt_coffee_size|medium": {
+            "default_units": 0,
+            "maximum_units": 1,
+            "unit_increment": 1
+          }
+        },
+        "defaulted_modifiers": [],
+        "modifier_prompt_free_settings": null
+      },
+      {
+        "external_id": "5_drinks|coffee|opt_coffee_topping",
+        "name": "Condiments",
+        "internal_name": "Condiments",
+        "modifier_list": "5_drinks|coffee|opt_coffee_topping|modifier_list",
+        "default_selection_model": {
+          "minimum_quantity": 0,
+          "maximum_quantity": 2
+        },
+        "display_settings": null,
+        "modifier_prompt_quantity_settings": {
+          "minimum_units": 0,
+          "maximum_units": 15
+        },
+        "modifier_quantity_settings": {
+          "5_drinks|coffee|opt_coffee_topping|cream": {
+            "default_units": 0,
+            "maximum_units": 10,
+            "unit_increment": 1
+          },
+          "5_drinks|coffee|opt_coffee_topping|sugar": {
+            "default_units": 0,
+            "maximum_units": 10,
+            "unit_increment": 1
+          }
+        },
+        "defaulted_modifiers": [],
+        "modifier_prompt_free_settings": null
+      },
+      {
+        "external_id": "5_drinks|coffee|opt_coffee_milk",
+        "name": "Milk",
+        "internal_name": "Milk",
+        "modifier_list": "5_drinks|coffee|opt_coffee_milk|modifier_list",
+        "default_selection_model": {
+          "minimum_quantity": 0,
+          "maximum_quantity": 1
+        },
+        "display_settings": null,
+        "modifier_prompt_quantity_settings": {
+          "minimum_units": 0,
+          "maximum_units": 1
+        },
+        "modifier_quantity_settings": {
+          "5_drinks|coffee|opt_coffee_milk|soy_milk": {
+            "default_units": 0,
+            "maximum_units": 1,
+            "unit_increment": 1
+          },
+          "5_drinks|coffee|opt_coffee_milk|whole_milk": {
+            "default_units": 0,
+            "maximum_units": 1,
+            "unit_increment": 1
+          },
+          "5_drinks|coffee|opt_coffee_milk|almond_milk": {
+            "default_units": 0,
+            "maximum_units": 1,
+            "unit_increment": 1
+          },
+          "5_drinks|coffee|opt_coffee_milk|fat_free_milk": {
+            "default_units": 0,
+            "maximum_units": 1,
+            "unit_increment": 1
+          }
+        },
+        "defaulted_modifiers": [],
+        "modifier_prompt_free_settings": null
+      },
+      {
+        "external_id": "5_drinks|smoothie|uid_opt_coffee_size",
+        "name": "Choose a Size",
+        "internal_name": "Choose a Size",
+        "modifier_list": "5_drinks|smoothie|uid_opt_coffee_size|modifier_list",
+        "default_selection_model": {
+          "minimum_quantity": 1,
+          "maximum_quantity": 1
+        },
+        "display_settings": null,
+        "modifier_prompt_quantity_settings": {
+          "minimum_units": 1,
+          "maximum_units": 1
+        },
+        "modifier_quantity_settings": {
+          "5_drinks|smoothie|uid_opt_coffee_size|large": {
+            "default_units": 0,
+            "maximum_units": 1,
+            "unit_increment": 1
+          },
+          "5_drinks|smoothie|uid_opt_coffee_size|small": {
+            "default_units": 0,
+            "maximum_units": 1,
+            "unit_increment": 1
+          },
+          "5_drinks|smoothie|uid_opt_coffee_size|medium": {
+            "default_units": 0,
+            "maximum_units": 1,
+            "unit_increment": 1
+          }
+        },
+        "defaulted_modifiers": [],
+        "modifier_prompt_free_settings": null
+      },
+      {
+        "external_id": "5_drinks|smoothie|opt_smoothie_topping",
+        "name": "Condiments",
+        "internal_name": "Condiments",
+        "modifier_list": "5_drinks|smoothie|opt_smoothie_topping|modifier_list",
+        "default_selection_model": {
+          "minimum_quantity": 1,
+          "maximum_quantity": 2
+        },
+        "display_settings": null,
+        "modifier_prompt_quantity_settings": {
+          "minimum_units": 1,
+          "maximum_units": 10
+        },
+        "modifier_quantity_settings": {
+          "5_drinks|smoothie|opt_smoothie_topping|drizzle": {
+            "default_units": 0,
+            "maximum_units": 5,
+            "unit_increment": 1
+          },
+          "5_drinks|smoothie|opt_smoothie_topping|whipped_cream": {
+            "default_units": 0,
+            "maximum_units": 5,
+            "unit_increment": 1
+          }
+        },
+        "defaulted_modifiers": [],
+        "modifier_prompt_free_settings": null
+      },
+      {
+        "external_id": "5_drinks|fountain_drink|drink_selection|orange_soda|drink_sizes",
+        "name": "Drink Size",
+        "internal_name": "Drink Size",
+        "modifier_list": "5_drinks|fountain_drink|drink_selection|orange_soda|drink_sizes|modifier_list",
+        "default_selection_model": {
+          "minimum_quantity": 1,
+          "maximum_quantity": 1
+        },
+        "display_settings": null,
+        "modifier_prompt_quantity_settings": {
+          "minimum_units": 1,
+          "maximum_units": 1
+        },
+        "modifier_quantity_settings": {
+          "5_drinks|fountain_drink|drink_selection|orange_soda|drink_sizes|large": {
+            "default_units": 0,
+            "maximum_units": 1,
+            "unit_increment": 1
+          },
+          "5_drinks|fountain_drink|drink_selection|orange_soda|drink_sizes|small": {
+            "default_units": 0,
+            "maximum_units": 1,
+            "unit_increment": 1
+          },
+          "5_drinks|fountain_drink|drink_selection|orange_soda|drink_sizes|medium": {
+            "default_units": 0,
+            "maximum_units": 1,
+            "unit_increment": 1
+          }
+        },
+        "defaulted_modifiers": [],
+        "modifier_prompt_free_settings": null
+      },
+      {
+        "external_id": "5_drinks|fountain_drink|drink_selection",
+        "name": "Choice of Fountain Beverage",
+        "internal_name": "Choice of Fountain Beverage",
+        "modifier_list": "5_drinks|fountain_drink|drink_selection|modifier_list",
+        "default_selection_model": {
+          "minimum_quantity": 1,
+          "maximum_quantity": 1
+        },
+        "display_settings": null,
+        "modifier_prompt_quantity_settings": {
+          "minimum_units": 1,
+          "maximum_units": 1
+        },
+        "modifier_quantity_settings": {
+          "5_drinks|fountain_drink|drink_selection|water": {
+            "default_units": 0,
+            "maximum_units": 1,
+            "unit_increment": 1
+          },
+          "5_drinks|fountain_drink|drink_selection|club_soda": {
+            "default_units": 0,
+            "maximum_units": 1,
+            "unit_increment": 1
+          },
+          "5_drinks|fountain_drink|drink_selection|ginger_ale": {
+            "default_units": 0,
+            "maximum_units": 1,
+            "unit_increment": 1
+          },
+          "5_drinks|fountain_drink|drink_selection|lemon_lime": {
+            "default_units": 0,
+            "maximum_units": 1,
+            "unit_increment": 1
+          },
+          "5_drinks|fountain_drink|drink_selection|orange_soda": {
+            "default_units": 0,
+            "maximum_units": 1,
+            "unit_increment": 1
+          },
+          "5_drinks|fountain_drink|drink_selection|strawberry_soda": {
+            "default_units": 0,
+            "maximum_units": 1,
+            "unit_increment": 1
+          }
+        },
+        "defaulted_modifiers": [],
+        "modifier_prompt_free_settings": null
+      }
+    ],
+    "modifier_lists": [
+      {
+        "external_id": "1_sandwich|100_pbj_sandwich|uid_opt_pbj_size|modifier_list",
+        "name": "Size",
+        "modifiers": [
+          "1_sandwich|100_pbj_sandwich|uid_opt_pbj_size|10_pbj_small",
+          "1_sandwich|100_pbj_sandwich|uid_opt_pbj_size|20_pbj_medium",
+          "1_sandwich|100_pbj_sandwich|uid_opt_pbj_size|30_pbj_large"
+        ]
+      },
+      {
+        "external_id": "1_sandwich|100_pbj_sandwich|uid_opt_grilled_toppings_large|modifier_list",
+        "name": "Toppings",
+        "modifiers": [
+          "1_sandwich|100_pbj_sandwich|uid_opt_grilled_toppings_large|10_cheese_opt_grilled_toppings_large",
+          "1_sandwich|100_pbj_sandwich|uid_opt_grilled_toppings_large|20_butter_opt_grilled_toppings_large",
+          "1_sandwich|100_pbj_sandwich|uid_opt_grilled_toppings_large|30_bacon_opt_grilled_toppings_large"
+        ]
+      },
+      {
+        "external_id": "1_sandwich|100_pbj_sandwich|uid_opt_grilled_toppings_large|10_cheese_opt_grilled_toppings_large|cheese_type|modifier_list",
+        "name": "Type of Cheese",
+        "modifiers": [
+          "1_sandwich|100_pbj_sandwich|uid_opt_grilled_toppings_large|10_cheese_opt_grilled_toppings_large|cheese_type|cheese_cheddar",
+          "1_sandwich|100_pbj_sandwich|uid_opt_grilled_toppings_large|10_cheese_opt_grilled_toppings_large|cheese_type|cheese_american",
+          "1_sandwich|100_pbj_sandwich|uid_opt_grilled_toppings_large|10_cheese_opt_grilled_toppings_large|cheese_type|cheese_provolone"
+        ]
+      },
+      {
+        "external_id": "1_sandwich|100_pbj_sandwich|spreads_pbj|modifier_list",
+        "name": "Spreads",
+        "modifiers": [
+          "1_sandwich|100_pbj_sandwich|spreads_pbj|jelly",
+          "1_sandwich|100_pbj_sandwich|spreads_pbj|peanut_butter"
+        ]
+      },
+      {
+        "external_id": "5_drinks|coffee|uid_opt_coffee_size|modifier_list",
+        "name": "Choose a Size",
+        "modifiers": [
+          "5_drinks|coffee|uid_opt_coffee_size|small",
+          "5_drinks|coffee|uid_opt_coffee_size|medium",
+          "5_drinks|coffee|uid_opt_coffee_size|large"
+        ]
+      },
+      {
+        "external_id": "5_drinks|coffee|opt_coffee_topping|modifier_list",
+        "name": "Condiments",
+        "modifiers": [
+          "5_drinks|coffee|opt_coffee_topping|sugar",
+          "5_drinks|coffee|opt_coffee_topping|cream"
+        ]
+      },
+      {
+        "external_id": "5_drinks|coffee|opt_coffee_milk|modifier_list",
+        "name": "Milk",
+        "modifiers": [
+          "5_drinks|coffee|opt_coffee_milk|whole_milk",
+          "5_drinks|coffee|opt_coffee_milk|fat_free_milk",
+          "5_drinks|coffee|opt_coffee_milk|soy_milk",
+          "5_drinks|coffee|opt_coffee_milk|almond_milk"
+        ]
+      },
+      {
+        "external_id": "5_drinks|smoothie|uid_opt_coffee_size|modifier_list",
+        "name": "Choose a Size",
+        "modifiers": [
+          "5_drinks|smoothie|uid_opt_coffee_size|small",
+          "5_drinks|smoothie|uid_opt_coffee_size|medium",
+          "5_drinks|smoothie|uid_opt_coffee_size|large"
+        ]
+      },
+      {
+        "external_id": "5_drinks|smoothie|opt_smoothie_topping|modifier_list",
+        "name": "Condiments",
+        "modifiers": [
+          "5_drinks|smoothie|opt_smoothie_topping|whipped_cream",
+          "5_drinks|smoothie|opt_smoothie_topping|drizzle"
+        ]
+      },
+      {
+        "external_id": "5_drinks|fountain_drink|drink_selection|modifier_list",
+        "name": "Choice of Fountain Beverage",
+        "modifiers": [
+          "5_drinks|fountain_drink|drink_selection|strawberry_soda",
+          "5_drinks|fountain_drink|drink_selection|lemon_lime",
+          "5_drinks|fountain_drink|drink_selection|ginger_ale",
+          "5_drinks|fountain_drink|drink_selection|club_soda",
+          "5_drinks|fountain_drink|drink_selection|orange_soda",
+          "5_drinks|fountain_drink|drink_selection|water"
+        ]
+      },
+      {
+        "external_id": "5_drinks|fountain_drink|drink_selection|orange_soda|drink_sizes|modifier_list",
+        "name": "Drink Size",
+        "modifiers": [
+          "5_drinks|fountain_drink|drink_selection|orange_soda|drink_sizes|small",
+          "5_drinks|fountain_drink|drink_selection|orange_soda|drink_sizes|medium",
+          "5_drinks|fountain_drink|drink_selection|orange_soda|drink_sizes|large"
+        ]
+      }
+    ],
+    "modifiers": [
+      {
+        "external_id": "1_sandwich|100_pbj_sandwich|uid_opt_pbj_size|10_pbj_small",
+        "name": "Small",
+        "internal_name": "Small",
+        "description": null,
+        "calorie_content": null,
+        "default_price": 6,
+        "tags": [],
+        "tax_rate": "feb124cea788f2d582bd40b188ffce1c",
+        "miscellaneous_taxes": [],
+        "media": null,
+        "sized_prices": [],
+        "submodifiers": [],
+        "metadata": "{}",
+        "schedule_ids": [],
+        "availability_ranges": [],
+        "availability_override": null,
+        "tax_category": {
+          "code": "100022"
+        }
+      },
+      {
+        "external_id": "1_sandwich|100_pbj_sandwich|uid_opt_pbj_size|20_pbj_medium",
+        "name": "Medium",
+        "internal_name": "Medium",
+        "description": null,
+        "calorie_content": null,
+        "default_price": 7,
+        "tags": [],
+        "tax_rate": "feb124cea788f2d582bd40b188ffce1c",
+        "miscellaneous_taxes": [],
+        "media": null,
+        "sized_prices": [],
+        "submodifiers": [],
+        "metadata": "{}",
+        "schedule_ids": [],
+        "availability_ranges": [],
+        "availability_override": null
+      },
+      {
+        "external_id": "1_sandwich|100_pbj_sandwich|uid_opt_pbj_size|30_pbj_large",
+        "name": "Large",
+        "internal_name": "Large",
+        "description": null,
+        "calorie_content": null,
+        "default_price": 8,
+        "tags": [],
+        "tax_rate": "feb124cea788f2d582bd40b188ffce1c",
+        "miscellaneous_taxes": [],
+        "media": null,
+        "sized_prices": [],
+        "submodifiers": [],
+        "metadata": "{}",
+        "schedule_ids": [],
+        "availability_ranges": [],
+        "availability_override": null
+      },
+      {
+        "external_id": "1_sandwich|100_pbj_sandwich|uid_opt_grilled_toppings_large|10_cheese_opt_grilled_toppings_large|cheese_type|cheese_cheddar",
+        "name": "Cheddar",
+        "internal_name": "Cheddar",
+        "description": null,
+        "calorie_content": null,
+        "default_price": 0,
+        "tags": [],
+        "tax_rate": "feb124cea788f2d582bd40b188ffce1c",
+        "miscellaneous_taxes": [],
+        "media": null,
+        "sized_prices": [],
+        "submodifiers": [],
+        "metadata": "{}",
+        "schedule_ids": [],
+        "availability_ranges": [],
+        "availability_override": null
+      },
+      {
+        "external_id": "1_sandwich|100_pbj_sandwich|uid_opt_grilled_toppings_large|10_cheese_opt_grilled_toppings_large|cheese_type|cheese_american",
+        "name": "American",
+        "internal_name": "American",
+        "description": null,
+        "calorie_content": null,
+        "default_price": 0,
+        "tags": [],
+        "tax_rate": "feb124cea788f2d582bd40b188ffce1c",
+        "miscellaneous_taxes": [],
+        "media": null,
+        "sized_prices": [],
+        "submodifiers": [],
+        "metadata": "{}",
+        "schedule_ids": [],
+        "availability_ranges": [],
+        "availability_override": null
+      },
+      {
+        "external_id": "1_sandwich|100_pbj_sandwich|uid_opt_grilled_toppings_large|10_cheese_opt_grilled_toppings_large|cheese_type|cheese_provolone",
+        "name": "Provolone",
+        "internal_name": "Provolone",
+        "description": null,
+        "calorie_content": null,
+        "default_price": 0,
+        "tags": [],
+        "tax_rate": "feb124cea788f2d582bd40b188ffce1c",
+        "miscellaneous_taxes": [],
+        "media": null,
+        "sized_prices": [],
+        "submodifiers": [],
+        "metadata": "{}",
+        "schedule_ids": [],
+        "availability_ranges": [],
+        "availability_override": null
+      },
+      {
+        "external_id": "1_sandwich|100_pbj_sandwich|uid_opt_grilled_toppings_large|10_cheese_opt_grilled_toppings_large",
+        "name": "Cheese",
+        "internal_name": "Cheese",
+        "description": null,
+        "calorie_content": null,
+        "default_price": 0,
+        "tags": [],
+        "tax_rate": "feb124cea788f2d582bd40b188ffce1c",
+        "miscellaneous_taxes": [],
+        "media": null,
+        "sized_prices": [],
+        "submodifiers": [
+          "1_sandwich|100_pbj_sandwich|uid_opt_grilled_toppings_large|10_cheese_opt_grilled_toppings_large|cheese_type"
+        ],
+        "metadata": "{}",
+        "schedule_ids": [],
+        "availability_ranges": [],
+        "availability_override": null
+      },
+      {
+        "external_id": "1_sandwich|100_pbj_sandwich|uid_opt_grilled_toppings_large|20_butter_opt_grilled_toppings_large",
+        "name": "Butter",
+        "internal_name": "Butter",
+        "description": null,
+        "calorie_content": null,
+        "default_price": 0,
+        "tags": [],
+        "tax_rate": "feb124cea788f2d582bd40b188ffce1c",
+        "miscellaneous_taxes": [],
+        "media": null,
+        "sized_prices": [],
+        "submodifiers": [],
+        "metadata": "{}",
+        "schedule_ids": [],
+        "availability_ranges": [],
+        "availability_override": null
+      },
+      {
+        "external_id": "1_sandwich|100_pbj_sandwich|uid_opt_grilled_toppings_large|30_bacon_opt_grilled_toppings_large",
+        "name": "Bacon",
+        "internal_name": "Bacon",
+        "description": null,
+        "calorie_content": null,
+        "default_price": 3,
+        "tags": [],
+        "tax_rate": "feb124cea788f2d582bd40b188ffce1c",
+        "miscellaneous_taxes": [],
+        "media": null,
+        "sized_prices": [],
+        "submodifiers": [],
+        "metadata": "{}",
+        "schedule_ids": [],
+        "availability_ranges": [],
+        "availability_override": null
+      },
+      {
+        "external_id": "1_sandwich|100_pbj_sandwich|spreads_pbj|jelly",
+        "name": "Jelly",
+        "internal_name": "Jelly",
+        "description": null,
+        "calorie_content": null,
+        "default_price": 0,
+        "tags": [],
+        "tax_rate": "feb124cea788f2d582bd40b188ffce1c",
+        "miscellaneous_taxes": [],
+        "media": null,
+        "sized_prices": [],
+        "submodifiers": [],
+        "metadata": "{}",
+        "schedule_ids": [],
+        "availability_ranges": [],
+        "availability_override": null
+      },
+      {
+        "external_id": "1_sandwich|100_pbj_sandwich|spreads_pbj|peanut_butter",
+        "name": "Peanut Butter",
+        "internal_name": "Peanut Butter",
+        "description": null,
+        "calorie_content": null,
+        "default_price": 0,
+        "tags": [],
+        "tax_rate": "feb124cea788f2d582bd40b188ffce1c",
+        "miscellaneous_taxes": [],
+        "media": null,
+        "sized_prices": [],
+        "submodifiers": [],
+        "metadata": "{}",
+        "schedule_ids": [],
+        "availability_ranges": [],
+        "availability_override": null
+      },
+      {
+        "external_id": "5_drinks|coffee|uid_opt_coffee_size|small",
+        "name": "Small",
+        "internal_name": "Small",
+        "description": null,
+        "calorie_content": null,
+        "default_price": 2,
+        "tags": [],
+        "tax_rate": "feb124cea788f2d582bd40b188ffce1c",
+        "miscellaneous_taxes": [],
+        "media": null,
+        "sized_prices": [],
+        "submodifiers": [],
+        "metadata": "{}",
+        "schedule_ids": [],
+        "availability_ranges": [],
+        "availability_override": null
+      },
+      {
+        "external_id": "5_drinks|coffee|uid_opt_coffee_size|medium",
+        "name": "Medium",
+        "internal_name": "Medium",
+        "description": null,
+        "calorie_content": null,
+        "default_price": 3,
+        "tags": [],
+        "tax_rate": "feb124cea788f2d582bd40b188ffce1c",
+        "miscellaneous_taxes": [],
+        "media": null,
+        "sized_prices": [],
+        "submodifiers": [],
+        "metadata": "{}",
+        "schedule_ids": [],
+        "availability_ranges": [],
+        "availability_override": null
+      },
+      {
+        "external_id": "5_drinks|coffee|uid_opt_coffee_size|large",
+        "name": "Large",
+        "internal_name": "Large",
+        "description": null,
+        "calorie_content": null,
+        "default_price": 4,
+        "tags": [],
+        "tax_rate": "feb124cea788f2d582bd40b188ffce1c",
+        "miscellaneous_taxes": [],
+        "media": null,
+        "sized_prices": [],
+        "submodifiers": [],
+        "metadata": "{}",
+        "schedule_ids": [],
+        "availability_ranges": [],
+        "availability_override": null
+      },
+      {
+        "external_id": "5_drinks|coffee|opt_coffee_topping|sugar",
+        "name": "Sugar",
+        "internal_name": "Sugar",
+        "description": null,
+        "calorie_content": null,
+        "default_price": 0,
+        "tags": [],
+        "tax_rate": "feb124cea788f2d582bd40b188ffce1c",
+        "miscellaneous_taxes": [],
+        "media": null,
+        "sized_prices": [],
+        "submodifiers": [],
+        "metadata": "{}",
+        "schedule_ids": [],
+        "availability_ranges": [],
+        "availability_override": null
+      },
+      {
+        "external_id": "5_drinks|coffee|opt_coffee_topping|cream",
+        "name": "Cream",
+        "internal_name": "Cream",
+        "description": null,
+        "calorie_content": null,
+        "default_price": 0,
+        "tags": [],
+        "tax_rate": "feb124cea788f2d582bd40b188ffce1c",
+        "miscellaneous_taxes": [],
+        "media": null,
+        "sized_prices": [],
+        "submodifiers": [],
+        "metadata": "{}",
+        "schedule_ids": [],
+        "availability_ranges": [],
+        "availability_override": null
+      },
+      {
+        "external_id": "5_drinks|coffee|opt_coffee_milk|whole_milk",
+        "name": "Whole Milk",
+        "internal_name": "Whole Milk",
+        "description": null,
+        "calorie_content": null,
+        "default_price": 0,
+        "tags": [],
+        "tax_rate": "feb124cea788f2d582bd40b188ffce1c",
+        "miscellaneous_taxes": [],
+        "media": null,
+        "sized_prices": [],
+        "submodifiers": [],
+        "metadata": "{}",
+        "schedule_ids": [],
+        "availability_ranges": [],
+        "availability_override": null
+      },
+      {
+        "external_id": "5_drinks|coffee|opt_coffee_milk|fat_free_milk",
+        "name": "Fat Free Milk",
+        "internal_name": "Fat Free Milk",
+        "description": null,
+        "calorie_content": null,
+        "default_price": 0,
+        "tags": [],
+        "tax_rate": "feb124cea788f2d582bd40b188ffce1c",
+        "miscellaneous_taxes": [],
+        "media": null,
+        "sized_prices": [],
+        "submodifiers": [],
+        "metadata": "{}",
+        "schedule_ids": [],
+        "availability_ranges": [],
+        "availability_override": null
+      },
+      {
+        "external_id": "5_drinks|coffee|opt_coffee_milk|soy_milk",
+        "name": "Soy Milk",
+        "internal_name": "Soy Milk",
+        "description": null,
+        "calorie_content": null,
+        "default_price": 1,
+        "tags": [],
+        "tax_rate": "feb124cea788f2d582bd40b188ffce1c",
+        "miscellaneous_taxes": [],
+        "media": null,
+        "sized_prices": [],
+        "submodifiers": [],
+        "metadata": "{}",
+        "schedule_ids": [],
+        "availability_ranges": [],
+        "availability_override": null
+      },
+      {
+        "external_id": "5_drinks|coffee|opt_coffee_milk|almond_milk",
+        "name": "Almond Milk",
+        "internal_name": "Almond Milk",
+        "description": null,
+        "calorie_content": null,
+        "default_price": 1.5,
+        "tags": [],
+        "tax_rate": "feb124cea788f2d582bd40b188ffce1c",
+        "miscellaneous_taxes": [],
+        "media": null,
+        "sized_prices": [],
+        "submodifiers": [],
+        "metadata": "{}",
+        "schedule_ids": [],
+        "availability_ranges": [],
+        "availability_override": null
+      },
+      {
+        "external_id": "5_drinks|smoothie|uid_opt_coffee_size|small",
+        "name": "Small",
+        "internal_name": "Small",
+        "description": null,
+        "calorie_content": null,
+        "default_price": 2,
+        "tags": [],
+        "tax_rate": "feb124cea788f2d582bd40b188ffce1c",
+        "miscellaneous_taxes": [],
+        "media": null,
+        "sized_prices": [],
+        "submodifiers": [],
+        "metadata": "{}",
+        "schedule_ids": [],
+        "availability_ranges": [],
+        "availability_override": null
+      },
+      {
+        "external_id": "5_drinks|smoothie|uid_opt_coffee_size|medium",
+        "name": "Medium",
+        "internal_name": "Medium",
+        "description": null,
+        "calorie_content": null,
+        "default_price": 3,
+        "tags": [],
+        "tax_rate": "feb124cea788f2d582bd40b188ffce1c",
+        "miscellaneous_taxes": [],
+        "media": null,
+        "sized_prices": [],
+        "submodifiers": [],
+        "metadata": "{}",
+        "schedule_ids": [],
+        "availability_ranges": [],
+        "availability_override": null
+      },
+      {
+        "external_id": "5_drinks|smoothie|uid_opt_coffee_size|large",
+        "name": "Large",
+        "internal_name": "Large",
+        "description": null,
+        "calorie_content": null,
+        "default_price": 4,
+        "tags": [],
+        "tax_rate": "feb124cea788f2d582bd40b188ffce1c",
+        "miscellaneous_taxes": [],
+        "media": null,
+        "sized_prices": [],
+        "submodifiers": [],
+        "metadata": "{}",
+        "schedule_ids": [],
+        "availability_ranges": [],
+        "availability_override": null
+      },
+      {
+        "external_id": "5_drinks|smoothie|opt_smoothie_topping|whipped_cream",
+        "name": "Whipped Cream",
+        "internal_name": "Whipped Cream",
+        "description": null,
+        "calorie_content": null,
+        "default_price": 0,
+        "tags": [],
+        "tax_rate": "feb124cea788f2d582bd40b188ffce1c",
+        "miscellaneous_taxes": [],
+        "media": null,
+        "sized_prices": [],
+        "submodifiers": [],
+        "metadata": "{}",
+        "schedule_ids": [],
+        "availability_ranges": [],
+        "availability_override": null
+      },
+      {
+        "external_id": "5_drinks|smoothie|opt_smoothie_topping|drizzle",
+        "name": "Drizzle",
+        "internal_name": "Drizzle",
+        "description": null,
+        "calorie_content": null,
+        "default_price": 0,
+        "tags": [],
+        "tax_rate": "feb124cea788f2d582bd40b188ffce1c",
+        "miscellaneous_taxes": [],
+        "media": null,
+        "sized_prices": [],
+        "submodifiers": [],
+        "metadata": "{}",
+        "schedule_ids": [],
+        "availability_ranges": [],
+        "availability_override": null
+      },
+      {
+        "external_id": "5_drinks|fountain_drink|drink_selection|strawberry_soda",
+        "name": "Strawberry Soda",
+        "internal_name": "Strawberry Soda",
+        "description": null,
+        "calorie_content": null,
+        "default_price": 1.79,
+        "tags": [],
+        "tax_rate": null,
+        "miscellaneous_taxes": [],
+        "media": null,
+        "sized_prices": [],
+        "submodifiers": [],
+        "metadata": "{}",
+        "schedule_ids": [],
+        "availability_ranges": [],
+        "availability_override": null
+      },
+      {
+        "external_id": "5_drinks|fountain_drink|drink_selection|lemon_lime",
+        "name": "Lemon Lime Soda",
+        "internal_name": "Lemon Lime Soda",
+        "description": null,
+        "calorie_content": null,
+        "default_price": 1.99,
+        "tags": [],
+        "tax_rate": null,
+        "miscellaneous_taxes": [],
+        "media": null,
+        "sized_prices": [],
+        "submodifiers": [],
+        "metadata": "{}",
+        "schedule_ids": [],
+        "availability_ranges": [],
+        "availability_override": null
+      },
+      {
+        "external_id": "5_drinks|fountain_drink|drink_selection|ginger_ale",
+        "name": "Ginger Ale",
+        "internal_name": "Ginger Ale",
+        "description": null,
+        "calorie_content": null,
+        "default_price": 1.79,
+        "tags": [],
+        "tax_rate": "e737c3b7a4c99675212fd1d50e6d945b",
+        "miscellaneous_taxes": [],
+        "media": null,
+        "sized_prices": [],
+        "submodifiers": [],
+        "metadata": "{}",
+        "schedule_ids": [],
+        "availability_ranges": [],
+        "availability_override": null
+      },
+      {
+        "external_id": "5_drinks|fountain_drink|drink_selection|club_soda",
+        "name": "Club Soda",
+        "internal_name": "Club Soda",
+        "description": null,
+        "calorie_content": null,
+        "default_price": 2.19,
+        "tags": [],
+        "tax_rate": "1e89f83ca9c996b33fe10a907322c2e0",
+        "miscellaneous_taxes": [],
+        "media": null,
+        "sized_prices": [],
+        "submodifiers": [],
+        "metadata": "{}",
+        "schedule_ids": [],
+        "availability_ranges": [],
+        "availability_override": null
+      },
+      {
+        "external_id": "5_drinks|fountain_drink|drink_selection|orange_soda|drink_sizes|small",
+        "name": "Small",
+        "internal_name": "Small",
+        "description": null,
+        "calorie_content": null,
+        "default_price": 1,
+        "tags": [],
+        "tax_rate": null,
+        "miscellaneous_taxes": [],
+        "media": null,
+        "sized_prices": [],
+        "submodifiers": [],
+        "metadata": "{}",
+        "schedule_ids": [],
+        "availability_ranges": [],
+        "availability_override": null
+      },
+      {
+        "external_id": "5_drinks|fountain_drink|drink_selection|orange_soda|drink_sizes|medium",
+        "name": "Medium",
+        "internal_name": "Medium",
+        "description": null,
+        "calorie_content": null,
+        "default_price": 1.5,
+        "tags": [],
+        "tax_rate": null,
+        "miscellaneous_taxes": [],
+        "media": null,
+        "sized_prices": [],
+        "submodifiers": [],
+        "metadata": "{}",
+        "schedule_ids": [],
+        "availability_ranges": [],
+        "availability_override": null
+      },
+      {
+        "external_id": "5_drinks|fountain_drink|drink_selection|orange_soda|drink_sizes|large",
+        "name": "Large",
+        "internal_name": "Large",
+        "description": null,
+        "calorie_content": null,
+        "default_price": 2,
+        "tags": [],
+        "tax_rate": null,
+        "miscellaneous_taxes": [],
+        "media": null,
+        "sized_prices": [],
+        "submodifiers": [],
+        "metadata": "{}",
+        "schedule_ids": [],
+        "availability_ranges": [],
+        "availability_override": null
+      },
+      {
+        "external_id": "5_drinks|fountain_drink|drink_selection|orange_soda",
+        "name": "Orange Soda",
+        "internal_name": "Orange Soda",
+        "description": null,
+        "calorie_content": null,
+        "default_price": 2.19,
+        "tags": [],
+        "tax_rate": null,
+        "miscellaneous_taxes": [],
+        "media": null,
+        "sized_prices": [],
+        "submodifiers": [
+          "5_drinks|fountain_drink|drink_selection|orange_soda|drink_sizes"
+        ],
+        "metadata": "{}",
+        "schedule_ids": [],
+        "availability_ranges": [],
+        "availability_override": null
+      },
+      {
+        "external_id": "5_drinks|fountain_drink|drink_selection|water",
+        "name": "Bottled Water",
+        "internal_name": "Bottled Water",
+        "description": null,
+        "calorie_content": null,
+        "default_price": 1.79,
+        "tags": [],
+        "tax_rate": null,
+        "miscellaneous_taxes": [],
+        "media": null,
+        "sized_prices": [],
+        "submodifiers": [],
+        "metadata": "{}",
+        "schedule_ids": [],
+        "availability_ranges": [],
+        "availability_override": null
+      }
+    ],
+    "sizes": [],
+    "availability_ranges": [],
+    "availability_overrides": [
+      {
+        "external_id": "availability_override",
+        "name": "availability_override",
+        "start_date": "2021-02-05T05:00:00.000Z",
+        "end_date": "9999-12-31T23:59:59.999Z",
+        "override_type": "UNAVAILABLE"
+      }
+    ],
+    "size_prompts": []
+  }
