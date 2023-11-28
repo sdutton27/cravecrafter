@@ -11,18 +11,18 @@ export default function Favorites() {
     const [favoriteRestaurants, setFavoriteRestaurants] = useState([]);
 
     const getFavoriteRestaurants = async () => {
-        try {
-            // const res = await fetch('/api/restaurants/');
-            // const res = await fetch('https://cravecrafter-production.up.railway.app/api/restaurants/');
-            const restaurantList = await res.json();
-            // this.setState({
-            //   todoList
-            // });
-            setFavoriteRestaurants(restaurantList)
-            console.log(restaurantList)
-          } catch (e) {
-            console.log(e);
-        }
+        // try {
+        //     // const res = await fetch('/api/restaurants/');
+        //     // const res = await fetch('https://cravecrafter-production.up.railway.app/api/restaurants/');
+        //     const restaurantList = await res.json();
+        //     // this.setState({
+        //     //   todoList
+        //     // });
+        //     setFavoriteRestaurants(restaurantList)
+        //     console.log(restaurantList)
+        //   } catch (e) {
+        //     console.log(e);
+        // }
     }
 
     const showFavoriteRestaurants = () => {
