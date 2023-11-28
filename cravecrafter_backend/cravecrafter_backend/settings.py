@@ -34,7 +34,14 @@ CORS_ORIGIN_WHITELIST = [
     'http://localhost:3000',
 ]
 
-ALLOWED_HOSTS = []
+# For deployment
+ALLOWED_HOSTS = [
+    'cravecrafter-production.up.railway.app', '127.0.0.1', 
+    #'http://localhost:3000'
+]
+
+# For deployment
+CSRF_TRUSTED_ORIGINS = ['https://cravecrafter-production.up.railway.app']
 
 
 # Application definition
