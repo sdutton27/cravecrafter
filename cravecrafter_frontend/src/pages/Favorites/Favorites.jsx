@@ -12,7 +12,7 @@ export default function Favorites() {
 
     const getFavoriteRestaurants = async () => {
         try {
-            const res = await fetch('/api/restaurants/');
+            // const res = await fetch('/api/restaurants/');
             // const res = await fetch('https://cravecrafter-production.up.railway.app/api/restaurants/');
             const restaurantList = await res.json();
             // this.setState({
