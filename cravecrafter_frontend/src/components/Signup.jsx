@@ -4,7 +4,7 @@ import grub from '../assets/grubhub.png'
 import burger from '../assets/Splash-Screen.png'
 
 
-export const Login = () => {
+export const Signup = () => {
   return (
     <div className="flex h-screen justify-center items-center mt-20">
       {/* Container */}
@@ -16,7 +16,7 @@ export const Login = () => {
             <img src={logo} alt="" className="pt-10 w-[12rem]" />
 
             {/* Slogan */}
-            <div className="text-black text-sm mb-8">Welcome back!</div>
+            <div className="text-black text-sm mb-8">Create an account</div>
 
             {/* Buttons */}
             <div className="flex flex-col mt-[5rem]">
@@ -27,13 +27,22 @@ export const Login = () => {
               <label className="text-xs">Password</label>
             
               <input type="text" className="bg-[#dedede] text-black h-9 text-[10px] pl-4 mb-2 rounded-full" placeholder="Password must be 6+ characters long" />
+            
+            <div className="flex gap-1 items-center justify-center">  
+              <input type="checkbox" className="h-2 w-2 outline-none bg-[#dedede] mb-2" />
+              <p className="text-[8px] mb-2 text-gray-400">
+            I agree to CraveCrafter’s  Terms of Service, Privacy Policy, and our default Notification Settings.
+            </p>
+            </div>
               
-              <button className="bg-[#fe5100] text-white py-2 mb-4 rounded-full text-sm">
-                Sign in
+              <button className="bg-[#fe5100] text-white py-2 mb-2 rounded-full text-sm">
+                Create Account
               </button>
-              <button className="flex bg-black justify-center text-white text-sm py-2 mb-2 h-10 rounded-full"> <img src={grub} alt="" className="h-3 w-3 mt-1 mr-4" />
-                Sign in with Grubhub
-              </button>
+
+              <p className="text-[8px] text-center text-gray-400">
+            Already have an account? Sign In
+            </p>
+            
             </div>
 
             {/* Privacy Notice */}
