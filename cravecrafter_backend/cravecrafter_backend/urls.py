@@ -15,13 +15,14 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path, include, re_path
 from rest_framework import routers 
 from api import views 
 
 router = routers.DefaultRouter()
 # default router for restaurant => we will add change this URL later to match the GrubHub API endpoint
 router.register(r'restaurants', views.RestaurantView, 'restaurant')
+# router.register(r'users^$', views.UserCreate, 'account-create')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -33,4 +34,5 @@ urlpatterns = [
 from django.views.generic import RedirectView
 urlpatterns += [
     path('', RedirectView.as_view(url='api/', permanent=True)),
+    # re_path(r'^users/', include('api.urls')),
 ]
