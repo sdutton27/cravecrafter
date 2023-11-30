@@ -9,8 +9,12 @@ import FavoriteEntree from '../../components/FavoriteEntree/FavoriteEntree';
 import { Link } from 'react-router-dom';
 import SurpriseOrderButton from '../../components/SurpriseOrderButton/SurpriseOrderButton';
 
+import Navbar from '../../components/Navbar/Navbar';
+
 export default function FavoriteRestaurants() {
   return (
+    <>
+    <Navbar />
     <div style={{
         position: "relative", width: '100%', minHeight: "100vh", display: "flex",
         flexDirection: "column"
@@ -38,5 +42,6 @@ export default function FavoriteRestaurants() {
             </div>
         </div>
     </div>
+    </>
   )
 }

@@ -7,6 +7,8 @@ import FavoriteEntree from '../../components/FavoriteEntree/FavoriteEntree';
 
 import { Link } from 'react-router-dom';
 
+import Navbar from '../../components/Navbar/Navbar'
+
 export default function Favorites() {
     const [favoriteRestaurants, setFavoriteRestaurants] = useState([]);
 
@@ -39,13 +41,12 @@ export default function Favorites() {
         getFavoriteRestaurants();
     },[])
 
-    // useEffect(()=>{
-    //     showFavoriteRestaurants();
-    // },[favoriteRestaurants])
-
     //for the time being
     const firstName = "Michael";
+
     return (
+        <>
+        <Navbar />
         <div style={{
             position: "relative", width: '100%', minHeight: "100vh", display: "flex",
             flexDirection: "column"
@@ -96,5 +97,6 @@ export default function Favorites() {
                 </div>
             </div>
         </div>
+        </>
     )
 }
