@@ -1,32 +1,57 @@
 import React from 'react'
-import foody from '../assets/foody.jpg'
-import grubhub from '../assets/grubhub.png'
+import logo from '../assets/ICON-logo.png'
+import grub from '../assets/grubhub.png'
+import burger from '../assets/Splash-Screen.png'
 
 import { FcGoogle } from "react-icons/fc";
 
 
 export const Signin = () => {
   return (
-    <div className='relative w-full h-screen bg-zinc-700/95'>
-      <img className='absolute h-full w-full object-cover mix-blend-overlay' src={foody} alt="/" />
+    <div className="flex h-screen justify-center items-center mt-20">
+      {/* Container */}
+      <div className="flex bg-[#fbfbf9] w-[732px] h-1024 border-1 shadow-xl">
+        {/* Left Column */}
+        <div className="flex-1">
+          <div className="w-60 mx-auto">
+            {/* Logo or Brand Name */}
+            <img src={logo} alt="" className="pt-10 w-[12rem]" />
 
-      <div className="flex h-full justify-center items-center">
-        <form className="mx-auto bg-white p-8 w-full max-w-[400px] rounded-lg">
-          <h3 className="text-2xl text-center text-[#d76c01] font-bold py-6">CraveCrafter</h3>
-          <div className="flex py-4">
-            <p className="flex relative bg-gray-900 hover:bg-gray-600 py-1 w-full gap-2 justify-center items-center border rounded-full shadow-xl text-md text-white"><img className="h-3 w-3" src={grubhub} alt="/" />Sign in with Grubhub</p>
+            {/* Slogan */}
+            <div className="text-black text-sm mb-8">Create an account</div>
+
+            {/* Buttons */}
+            <div className="flex flex-col mt-[8rem]">
+              <button className="flex bg-black justify-center text-white text-sm py-2 mb-2 h-10 rounded-full"> <img src={grub} alt="" className="h-3 w-3 mt-1 mr-4" />
+                Sign in with Grubhub
+              </button>
+              <button className="bg-white text-black h-9 text-sm pt-1 mb-2 border-2 border-black rounded-full flex"><FcGoogle className="mx-6 mt-1 h-4 w-4" />
+                Sign in with Google
+              </button>
+              <button className="bg-[#fe5100] text-white py-2 mb-4 rounded-full text-sm">
+                Sign in with email
+              </button>
+            </div>
+
+            {/* Privacy Notice */}
+            <p className="text-xs text-center text-gray-400 mt-auto">
+            Already have an account? Sign In
+            </p>
+            <p className="text-[8px] text-center text-gray-400 mt-20 ">
+            By creating an account you agree with our Terms of Service, Privacy Policy, and our default Notification Settings.
+            </p>
           </div>
-          <div class="flex items-center">
-            <div class="grow border-b border-gray-300"></div>
-            <span class="shrink px-1 pb-1 text-gray-200">or</span>
-          <div class="grow border-b border-gray-200"></div>
-</div>
-          <div className="flex py-4">
-            <p className="flex relative py-1 w-full gap-2 justify-center items-center border-2 rounded-full shadow-xl text-md "><FcGoogle />Continue with Google account</p>
-          </div>
-          <p className="text-center text-xs text-gray-400">Already have an account? <span className="text-[#067acc]">Sign in</span></p>
-        </form>
-        <img src="" alt="/" />
+        </div>
+
+        {/* Right Column */}
+        <div className="flex-1">
+          {/* Image */}
+          <img
+            src={burger}  
+            alt="Background"
+            className="w-full h-full object-cover"
+          />
+        </div>
       </div>
     </div>
   )
