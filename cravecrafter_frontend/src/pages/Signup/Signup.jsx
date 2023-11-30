@@ -1,7 +1,7 @@
 import React from 'react'
-import logo from '../assets/ICON-logo.png'
-import grub from '../assets/grubhub.png'
-import burger from '../assets/Splash-Screen.png'
+import logo from '../../assets/images/ICON-logo.png'
+import grub from '../../assets/images/grubhub.png'
+import burger from '../../assets/images/Splash-Screen.png'
 
 
 export const Signup = () => {
