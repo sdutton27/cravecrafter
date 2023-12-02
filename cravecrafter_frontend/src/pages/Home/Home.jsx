@@ -3,9 +3,10 @@ import './home.css'
 import SurpriseOrderButton from '../../components/SurpriseOrderButton/SurpriseOrderButton'
 import heroImage from '../../assets/images/hero-img.jpeg'
 import logo from '../../assets/images/logo-white.png'
-import Navbar from '../../components/Navbar/Navbar'
+import Navbar from '../../components/Navbar/Navbar';
 
 export default function Home() {
+
     return (
         <>
         <Navbar />
@@ -31,6 +32,6 @@ export default function Home() {
                     <div style={{ alignSelf: "center", width: "80%", color: '#050312', fontSize: 16, fontFamily: 'Epilogue', fontWeight: '500', lineHeight: 2, wordWrap: 'break-word' }}>Welcome to CraveCrafter, your personal choice champion! Life gets busy, and we get it. That's why we've created a one-of-a-kind web application that takes the hassle out of decision-making. When you're short on time or motivation, simply place an order, and let us surprise you with one of your favorite dishes from one of your favorite local restaurants. It's like a culinary adventure delivered to your doorstep! Embrace the unexpected, savor the surprise – because a delightful meal is just a click away with CraveCrafter!</div>
             </div>
         </div>
-        </>
+        </> 
     )
 }

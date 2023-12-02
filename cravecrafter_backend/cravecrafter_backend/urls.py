@@ -17,22 +17,20 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include, re_path
 from rest_framework import routers 
-from api import views 
+from api.views import RestaurantView
 
 router = routers.DefaultRouter()
-# default router for restaurant => we will add change this URL later to match the GrubHub API endpoint
-router.register(r'restaurants', views.RestaurantView, 'restaurant')
-# router.register(r'users^$', views.UserCreate, 'account-create')
+router.register(r'restaurants', RestaurantView, 'restaurant')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # path('api/', include('api.urls'))
-    path('api/', include(router.urls))
+    path('api/', include(router.urls)),
+    path('api/', include("api.urls")),
+    path('auth/', include("auth.urls")),
 ]
 
 #Add URL maps to redirect the base URL to our application
 from django.views.generic import RedirectView
 urlpatterns += [
     path('', RedirectView.as_view(url='api/', permanent=True)),
-    # re_path(r'^users/', include('api.urls')),
 ]

@@ -12,20 +12,25 @@ import { Checkout } from './pages/Checkout/Checkout';
 
 import FavoriteRestaurants from './pages/FavoriteRestaurants/FavoriteRestaurants';
 
+import MainWrapper from './context/MainWrapper';
+import PrivateRoute from './context/PrivateRoute';
+
 
 function App() {
   return (
     <>
+    <MainWrapper>
     <Routes>
       <Route path="/" element={<Home />} />
       {/* <Route path="/login" element={<Login />} />
       <Route path="/signin" element={<Signin />} /> */}
       <Route path="/signup" element={<Signup />} />
-      <Route path="/checkout" element={<Checkout />} />
-      <Route path="/favorites" element={<Favorites />}/>
-      <Route path="/favorites/restaurants" element={<FavoriteRestaurants />}/>
+      <Route path="/checkout" element={<PrivateRoute><Checkout /></PrivateRoute>} />
+      <Route path="/favorites" element={<PrivateRoute><Favorites /></PrivateRoute>}/>
+      <Route path="/favorites/restaurants" element={<PrivateRoute><FavoriteRestaurants /></PrivateRoute>}/>
     </Routes>
-    <Footer />
+    <Footer /> 
+    </MainWrapper>
     </>
   );
 }

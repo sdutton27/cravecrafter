@@ -102,3 +102,11 @@ How to make a new page: (for example '/checkout'):
         import Checkout from './views/Checkout/Checkout';
 
 Now when you navigate to localhost:3000/checkout, it will show you the title "Checkout"
+
+===========
+Django Auth Tutorial:
+
+Part 1:
+https://blog.devgenius.io/django-rest-framework-react-authentication-workflow-2022-part-2-d299b7fef875
+Part 2:
+https://blog.devgenius.io/django-rest-framework-react-authentication-workflow-2022-part-2-d299b7fef875

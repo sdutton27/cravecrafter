@@ -9,50 +9,47 @@ import { Link } from 'react-router-dom';
 
 import Navbar from '../../components/Navbar/Navbar'
 
+import { useAuthStore } from '../../store/auth';
+
+import useAxios from '../../utils/useAxios';
+
 export default function Favorites() {
     const [favoriteRestaurants, setFavoriteRestaurants] = useState([]);
+    const api = useAxios();
+    const user = useAuthStore((state) => state.user)()
 
     const getFavoriteRestaurants = async () => {
         try {
-            //const res = await fetch('/api/restaurants/');
-            const res = await fetch (`${process.env.REACT_APP_BACKEND_URL}/api/restaurants/`)
-            // const res = await fetch('https://cravecrafter-production.up.railway.app/api/restaurants/');
-            const restaurantList = await res.json();
-            // this.setState({
-            //   todoList
-            // });
+            const response = await api.get('api/favorites/restaurants');
+            const restaurantList = response.data
             setFavoriteRestaurants(restaurantList)
-            console.log(restaurantList)
-          } catch (e) {
-            console.log(e);
+        } catch (error) {
+            console.log(error);// just keeping as an alert for now!
         }
-    }
 
-    const showFavoriteRestaurants = () => {
-        console.log("showing favorite restaurants")
-        console.log(favoriteRestaurants[0])
-        console.log(favoriteRestaurants.length)
-        return favoriteRestaurants.map((restaurant, i)=>(
-            <FavoriteRestaurant key={i} name={restaurant.name} imgLink={restaurant.img_url} numFavorites={1} isOpen={true}/>
-        ))
-    }
+    };
 
-    useEffect(()=>{
-        getFavoriteRestaurants();
-    },[])
+const showFavoriteRestaurants = () => {
+    // Right now this is showing the numFavorites and isOpen as false information
+    return favoriteRestaurants.map((restaurant, i) => (
+        <FavoriteRestaurant key={i} name={restaurant.fields.name} imgLink={restaurant.fields.img_url} numFavorites={1} isOpen={true} />
+    ))
+}
 
-    //for the time being
-    const firstName = "Michael";
+useEffect(() => {
+    getFavoriteRestaurants();
+}, [])
 
-    return (
-        <>
+
+return (
+    <>
         <Navbar />
         <div style={{
             position: "relative", width: '100%', minHeight: "100vh", display: "flex",
             flexDirection: "column"
         }} className="pt-60 md:pt-48">
             <div style={{ width: '100%', alignItems: 'center', display: "flex", flexDirection: "column" }}>
-                <h3 className="text-2xl">{firstName}'s Favorites</h3>
+                <h3 className="text-2xl">Your Favorites</h3>
                 <Search style={{
                     position: "absolute", zIndex: "100", alignSelf: "left",
                     transform: "translateX(-125px)"
@@ -66,18 +63,13 @@ export default function Favorites() {
                     <h3 className="text-2xl">Favorite Restaurants</h3>
                     {/* This link will route to the Favorite Restaurants page */}
                     <Link to="/favorites/restaurants"
-                    style={{
-                        marginLeft: "auto", color: 'black', fontFamily: 'Epilogue',
-                        fontWeight: '500', textDecoration: 'underline'
-                    }}>View All</Link>
+                        style={{
+                            marginLeft: "auto", color: 'black', fontFamily: 'Epilogue',
+                            fontWeight: '500', textDecoration: 'underline'
+                        }}>View All</Link>
                 </div>
                 <div style={{ overflowX: "auto", width: "100%" }} className="flex flex-column gap-6 mt-3">
-                    {/* {favoriteRestaurants ? showFavoriteRestaurants() : <></>} */}
                     {showFavoriteRestaurants()}
-                    {/* <FavoriteRestaurant name={"Applebee's"} imgLink={testRestaurant} numFavorites={2} isOpen={true}/>
-                    <FavoriteRestaurant name={"Papa John's"} imgLink={testRestaurant} numFavorites={2} isOpen={false}/>
-                    <FavoriteRestaurant name={"Pollo Tropical"} imgLink={testRestaurant} numFavorites={2} isOpen={true}/>
-                    <FavoriteRestaurant name={"McDonald's"} imgLink={testRestaurant} numFavorites={2} isOpen={false}/> */}
                 </div>
             </div>
             <div className="my-10 px-4 sm:px-8 md:px-14" style={{ overflow: "hidden" }}>
@@ -90,13 +82,13 @@ export default function Favorites() {
                     }}>View All</Link>
                 </div>
                 <div style={{ overflowX: "auto", width: "100%" }} className="flex flex-column gap-6 mt-3">
-                    <FavoriteEntree name={"El Pollo"} imgLink={testRestaurant} restaurant={"Jalapenos Mexican Restaurant"} price={"$14.99"} isOpen={true}/>
-                    <FavoriteEntree name={"Red Curry Combo"} imgLink={testRestaurant} restaurant={"Bamboo Penny's"} price={"$12.95"} isOpen={true}/>
-                    <FavoriteEntree name={"Chicken Fingers"} imgLink={testRestaurant} restaurant={"Applebee's"} price={"$9.99"} isOpen={false}/>
-                    <FavoriteEntree name={"Pad Thai"} imgLink={testRestaurant} restaurant={"Thai Basil"} price={"$13.95"} isOpen={false}/>
+                    <FavoriteEntree name={"El Pollo"} imgLink={testRestaurant} restaurant={"Jalapenos Mexican Restaurant"} price={"$14.99"} isOpen={true} />
+                    <FavoriteEntree name={"Red Curry Combo"} imgLink={testRestaurant} restaurant={"Bamboo Penny's"} price={"$12.95"} isOpen={true} />
+                    <FavoriteEntree name={"Chicken Fingers"} imgLink={testRestaurant} restaurant={"Applebee's"} price={"$9.99"} isOpen={false} />
+                    <FavoriteEntree name={"Pad Thai"} imgLink={testRestaurant} restaurant={"Thai Basil"} price={"$13.95"} isOpen={false} />
                 </div>
             </div>
         </div>
-        </>
-    )
+    </>
+)
 }
