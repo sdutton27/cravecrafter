@@ -8,10 +8,10 @@ import { Checkout } from "./components/Checkout";
 function App() {
   return (
     <div>
-      <Login />
-      <Signin />
-      <Signup />
-      {/* <Checkout /> */}
+      {/* <Login /> */}
+      {/*<Signin /> */}
+      {/* <Signup /> */}
+      <Checkout />
       {/* <Footer /> */}
 
     </div>
