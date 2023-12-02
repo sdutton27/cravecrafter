@@ -15,6 +15,7 @@ import useAxios from '../../utils/useAxios';
 
 export default function Favorites() {
     const [favoriteRestaurants, setFavoriteRestaurants] = useState([]);
+    const [favoriteMenuItems, setFavoriteMenuItems] = useState([]);
     const api = useAxios();
     const user = useAuthStore((state) => state.user)()
 
@@ -29,6 +30,18 @@ export default function Favorites() {
 
     };
 
+    const getFavoriteMenuItems = async () => {
+        try {
+            const response = await api.get('api/favorites/menu_items');
+            console.log(response)
+            const favoritesList = response.data
+            setFavoriteMenuItems(favoritesList)
+        } catch (error) {
+            console.log(error);// just keeping as an alert for now!
+        }
+
+    };
+
 const showFavoriteRestaurants = () => {
     // Right now this is showing the numFavorites and isOpen as false information
     return favoriteRestaurants.map((restaurant, i) => (
@@ -36,8 +49,17 @@ const showFavoriteRestaurants = () => {
     ))
 }
 
+const showFavoriteMenuItems = () => {
+    // Right now this is showing the numFavorites and isOpen as false information
+    // return favoriteMenuItems.map((item, i) => (
+    //     // <FavoriteEntree key={i} name={item.fields.name} imgLink={restaurant.fields.img_url} numFavorites={1} isOpen={true} />
+    // ))
+}
+
+
 useEffect(() => {
     getFavoriteRestaurants();
+    getFavoriteMenuItems();
 }, [])
 
 
@@ -68,7 +90,7 @@ return (
                             fontWeight: '500', textDecoration: 'underline'
                         }}>View All</Link>
                 </div>
-                <div style={{ overflowX: "auto", width: "100%" }} className="flex flex-column gap-6 mt-3">
+                <div style={{ overflowX: "scroll", width: "100%" }} className="flex flex-column mt-3">
                     {showFavoriteRestaurants()}
                 </div>
             </div>
@@ -82,10 +104,11 @@ return (
                     }}>View All</Link>
                 </div>
                 <div style={{ overflowX: "auto", width: "100%" }} className="flex flex-column gap-6 mt-3">
-                    <FavoriteEntree name={"El Pollo"} imgLink={testRestaurant} restaurant={"Jalapenos Mexican Restaurant"} price={"$14.99"} isOpen={true} />
-                    <FavoriteEntree name={"Red Curry Combo"} imgLink={testRestaurant} restaurant={"Bamboo Penny's"} price={"$12.95"} isOpen={true} />
+                    {showFavoriteMenuItems()}
+                    {/* <FavoriteEntree name={"El Pollo"} imgLink={testRestaurant} restaurant={"Jalapenos Mexican Restaurant"} price={"$14.99"} isOpen={true} /> */}
+                    {/* <FavoriteEntree name={"Red Curry Combo"} imgLink={testRestaurant} restaurant={"Bamboo Penny's"} price={"$12.95"} isOpen={true} />
                     <FavoriteEntree name={"Chicken Fingers"} imgLink={testRestaurant} restaurant={"Applebee's"} price={"$9.99"} isOpen={false} />
-                    <FavoriteEntree name={"Pad Thai"} imgLink={testRestaurant} restaurant={"Thai Basil"} price={"$13.95"} isOpen={false} />
+                    <FavoriteEntree name={"Pad Thai"} imgLink={testRestaurant} restaurant={"Thai Basil"} price={"$13.95"} isOpen={false} /> */}
                 </div>
             </div>
         </div>

@@ -1,8 +1,8 @@
 import React from 'react'
-import logo from '../assets/ICON-logo.png'
-import logo1 from '../assets/ICON-logo-black.png'
-import gift from '../assets/gifticon-bg.png'
-import linkedin from '../assets/ICON-linkedin.png'
+import logo from '../../assets/images/ICON-logo.png'
+import logo1 from '../../assets/images/logo-black.png'
+import gift from '../../assets/gifticon-bg.png'
+import linkedin from '../../assets/images/linkedin.png'
 
 import { FaUserCircle } from "react-icons/fa";
 import { GiKnifeFork } from "react-icons/gi";
