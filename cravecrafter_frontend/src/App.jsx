@@ -9,11 +9,13 @@ import Favorites from './pages/Favorites/Favorites';
 import Footer from './components/Footer/Footer';
 // import {Footer} from './components/Footer';
 import { Checkout } from './pages/Checkout/Checkout';
+import SurpriseOption from './pages/SurpriseOption/SurpriseOption';
 
 import FavoriteRestaurants from './pages/FavoriteRestaurants/FavoriteRestaurants';
 
 import MainWrapper from './context/MainWrapper';
 import PrivateRoute from './context/PrivateRoute';
+import { OrderDetails } from './pages/OrderDetails/OrderDetails';
 
 
 function App() {
@@ -28,6 +30,8 @@ function App() {
       <Route path="/checkout" element={<PrivateRoute><Checkout /></PrivateRoute>} />
       <Route path="/favorites" element={<PrivateRoute><Favorites /></PrivateRoute>}/>
       <Route path="/favorites/restaurants" element={<PrivateRoute><FavoriteRestaurants /></PrivateRoute>}/>
+      <Route path="/surprise-option" element={<PrivateRoute><SurpriseOption /></PrivateRoute>} />
+      <Route path="/order-details" element={<PrivateRoute><OrderDetails /></PrivateRoute>} />
     </Routes>
     <Footer /> 
     </MainWrapper>

@@ -1,5 +1,5 @@
 import React from 'react'
-import giftbox from '../assets/surprise-me.png'
+import giftbox from '../../assets/images/surprise-me.png'
 
 
 
@@ -26,3 +26,5 @@ export const SurpriseOption = () => {
     </div>
   )
 }
+
+export default SurpriseOption;
