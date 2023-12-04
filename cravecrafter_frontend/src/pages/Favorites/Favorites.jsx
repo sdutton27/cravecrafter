@@ -3,7 +3,7 @@ import { ReactComponent as Search } from '../../assets/images/search.svg'
 import FavoriteRestaurant from '../../components/FavoriteRestaurant/FavoriteRestaurant';
 
 import testRestaurant from '../../assets/images/test-restaurant.jpeg'
-import FavoriteEntree from '../../components/FavoriteEntree/FavoriteEntree';
+import FavoriteMenuItem from '../../components/FavoriteMenuItem/FavoriteMenuItem';
 
 import { Link } from 'react-router-dom';
 
@@ -51,9 +51,9 @@ const showFavoriteRestaurants = () => {
 
 const showFavoriteMenuItems = () => {
     // Right now this is showing the numFavorites and isOpen as false information
-    // return favoriteMenuItems.map((item, i) => (
-    //     // <FavoriteEntree key={i} name={item.fields.name} imgLink={restaurant.fields.img_url} numFavorites={1} isOpen={true} />
-    // ))
+    return favoriteMenuItems.map((item, i) => (
+        <FavoriteMenuItem key={i} name={item.fields.name} imgLink={item.fields.img_url} restaurant={"RESTAURANT"} price={item.fields.price_in_cents} isOpen={true} />
+    ))
 }
 
 
@@ -95,20 +95,17 @@ return (
                 </div>
             </div>
             <div className="my-10 px-4 sm:px-8 md:px-14" style={{ overflow: "hidden" }}>
-                <div style={{ display: "flex", flexDirection: "row", width: "100%", alignItems: "center", marginRight: "auto" }}>
-                    <h3 className="text-2xl">Favorite Entrees</h3>
-                    {/* This link will route to the Favorite Entrees page */}
-                    <Link style={{
-                        marginLeft: "auto", color: 'black', fontFamily: 'Epilogue',
-                        fontWeight: '500', textDecoration: 'underline'
-                    }}>View All</Link>
+            <div style={{ display: "flex", flexDirection: "row", width: "100%", alignItems: "center", marginRight: "auto" }}>
+                    <h3 className="text-2xl">Favorite Menu Items</h3>
+                    {/* This link will route to the Favorite Restaurants page */}
+                    <Link to="/favorites/menu-items"
+                        style={{
+                            marginLeft: "auto", color: 'black', fontFamily: 'Epilogue',
+                            fontWeight: '500', textDecoration: 'underline'
+                        }}>View All</Link>
                 </div>
-                <div style={{ overflowX: "auto", width: "100%" }} className="flex flex-column gap-6 mt-3">
+                <div style={{ overflowX: "scroll", width: "100%" }} className="flex flex-column mt-3">
                     {showFavoriteMenuItems()}
-                    {/* <FavoriteEntree name={"El Pollo"} imgLink={testRestaurant} restaurant={"Jalapenos Mexican Restaurant"} price={"$14.99"} isOpen={true} /> */}
-                    {/* <FavoriteEntree name={"Red Curry Combo"} imgLink={testRestaurant} restaurant={"Bamboo Penny's"} price={"$12.95"} isOpen={true} />
-                    <FavoriteEntree name={"Chicken Fingers"} imgLink={testRestaurant} restaurant={"Applebee's"} price={"$9.99"} isOpen={false} />
-                    <FavoriteEntree name={"Pad Thai"} imgLink={testRestaurant} restaurant={"Thai Basil"} price={"$13.95"} isOpen={false} /> */}
                 </div>
             </div>
         </div>

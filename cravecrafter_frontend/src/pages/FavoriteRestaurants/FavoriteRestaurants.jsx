@@ -4,7 +4,7 @@ import { ReactComponent as Search } from '../../assets/images/search.svg'
 import FavoriteRestaurant from '../../components/FavoriteRestaurant/FavoriteRestaurant';
 
 import testRestaurant from '../../assets/images/test-restaurant.jpeg'
-import FavoriteEntree from '../../components/FavoriteEntree/FavoriteEntree';
+import FavoriteEntree from '../../components/FavoriteMenuItem/FavoriteMenuItem';
 
 import { Link } from 'react-router-dom';
 import SurpriseOrderButton from '../../components/SurpriseOrderButton/SurpriseOrderButton';

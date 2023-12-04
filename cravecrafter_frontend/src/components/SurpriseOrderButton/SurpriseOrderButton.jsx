@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 export default function SurpriseOrderButton({classes}) {
     const navigate = useNavigate(); // to nav with button
     return (
-        <button onClick={() => navigate('/surprise')}
+        <button onClick={() => navigate('/surprise-order/details')}
                 className={classes}
                 style={{ 
                         // paddingLeft: 24, 

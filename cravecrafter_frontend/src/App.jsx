@@ -30,8 +30,8 @@ function App() {
       <Route path="/checkout" element={<PrivateRoute><Checkout /></PrivateRoute>} />
       <Route path="/favorites" element={<PrivateRoute><Favorites /></PrivateRoute>}/>
       <Route path="/favorites/restaurants" element={<PrivateRoute><FavoriteRestaurants /></PrivateRoute>}/>
-      <Route path="/surprise-option" element={<PrivateRoute><SurpriseOption /></PrivateRoute>} />
-      <Route path="/order-details" element={<PrivateRoute><OrderDetails /></PrivateRoute>} />
+      <Route path="/surprise-order/surprise" element={<PrivateRoute><SurpriseOption /></PrivateRoute>} />
+      <Route path="/surprise-order/details" element={<PrivateRoute><OrderDetails /></PrivateRoute>} />
     </Routes>
     <Footer /> 
     </MainWrapper>

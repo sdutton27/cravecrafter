@@ -29,14 +29,15 @@ export default function Navbar() {
   return (
     <div id="navbar" style={{
       position: 'absolute', zIndex: "10", display: "flex",
-      height: '50px', width: '100%'
+      height: '50px', width: '100%',
+      backgroundColor: (location === '' ? "transparent" : "#FCFBFA")
     }}>
       <div id="left-nav" style={{ display: "flex", alignSelf: "center" }}>
         {location === '' ? (
-          <Link to='/'><img src={logoWhite} className="w-46 mt-4 mb-2 m:m-0 w-64" />
+          <Link to='/'><img src={logoWhite} className="w-46 mt-4 mb-2 m:m-4 w-64" />
           </Link>
         ) : (
-          <Link to='/'><img src={logoBlack} className="w-46 mt-4 mb-2 m:m-0 w-64" />
+          <Link to='/'><img src={logoBlack} className="w-46 mt-4 mb-2 m:m-4 w-64" />
           </Link>
         )}
       </div>
