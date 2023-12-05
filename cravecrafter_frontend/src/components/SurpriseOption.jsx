@@ -1,5 +1,5 @@
 import React from 'react'
-import giftbox from '../assets/surprise-me.png'
+import giftbox from '../assets/give.gif'
 
 
 
@@ -14,7 +14,7 @@ export const SurpriseOption = () => {
 
         {/* Image at the center */}
         <div className="flex items-center justify-center mb-4">
-          <img src={giftbox} alt="" className="w-40 h-40" />
+          <img src={giftbox} alt="" className="w-60 h-60 mt-2" />
         </div>
 
         {/* Stacked Buttons at the bottom */}

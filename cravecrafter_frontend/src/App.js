@@ -5,6 +5,9 @@ import { Footer } from "./components/Footer";
 import { Checkout } from "./components/Checkout";
 import { OrderDetails } from "./components/OrderDetails";
 import { SurpriseOption } from "./components/SurpriseOption";
+import { Loading } from "./components/Loading";
+import { OrderSuccess } from "./components/OrderSuccess";
+import { Tracker } from "./components/Tracker";
 
 
 function App() {
@@ -13,8 +16,11 @@ function App() {
       {/* <Login /> */}
       {/* <Signin /> */} 
       {/* <Signup /> */}
-      <OrderDetails />
       <SurpriseOption />
+      <Loading />
+      {/* <OrderDetails /> */}
+      <OrderSuccess />
+      <Tracker />
       {/* <Checkout /> */}
       {/* <Footer /> */}
 
