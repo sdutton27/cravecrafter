@@ -53,7 +53,7 @@ export default function Navbar() {
             About</Scroll.Link>
         )}
         <Link to="/favorites" className="nav-link" style={{ color: (location === '' ? "#FCFBFA" : "#050312") }}>Favorites</Link>
-        <SurpriseOrderButton classes=" h-10 px-5" />
+        <SurpriseOrderButton classes=" h-10 px-5" navTo="/surprise-order/details" />
         <CartButton classes="h-10 px-5" />
         <ProfileButton classes="h-10 w-10" />
       </div>

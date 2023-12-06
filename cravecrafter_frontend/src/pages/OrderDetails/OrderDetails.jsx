@@ -23,6 +23,8 @@ import { Unstable_Popup as BasePopup } from '@mui/base/Unstable_Popup';
 import { ClickAwayListener } from '@mui/base/ClickAwayListener';
 import AllergyPopup from '../../components/AllergyPopup/AllergyPopup';
 
+import SurpriseOrderButton from '../../components/SurpriseOrderButton/SurpriseOrderButton';
+
 export const OrderDetails = () => {
 
   const [budget, setBudget] = useState('');
@@ -52,9 +54,9 @@ export const OrderDetails = () => {
 
   return (
     <div className="bg-[#7a7a7a] min-h-screen flex items-center justify-center">
-      <div className="max-w-xs mx-auto mt-10">
+      <div className="max-w-xs mx-auto mt-10 flex justify-center items-center">
         {/* Card Container */}
-        <div className="bg-white shadow-2xl px-6 pt-8 pb-6 rounded-xl">
+        <div className="bg-white shadow-2xl px-6 pt-8 pb-6 rounded-xl flex flex-col w-80 h-[550px]">
           {/* Title */}
           <h3 className="text-xl text-[#050312] text-1.5rem font-semibold mb-2">Order Details</h3>
 
@@ -184,10 +186,9 @@ export const OrderDetails = () => {
                 />
           </div>
           {/* Button */}
-          <div className="mt-4">
-            <button className="bg-[#ff4700] flex items-center gap-2 text-white px-4 py-2 rounded-full m-auto my-3">Surprise Order<GiKnifeFork /></button>
-          </div>
+          <SurpriseOrderButton classes=" h-10 px-5 m-auto mt-4 mb-3" navTo="/surprise-order/surprise" />
         </div>
+        
       </div>
     </div>
   )

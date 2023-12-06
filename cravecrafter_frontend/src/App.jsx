@@ -17,7 +17,6 @@ import MainWrapper from './context/MainWrapper';
 import PrivateRoute from './context/PrivateRoute';
 import { OrderDetails } from './pages/OrderDetails/OrderDetails';
 
-
 function App() {
   return (
     <>
