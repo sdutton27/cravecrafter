@@ -32,18 +32,18 @@ export const OrderDetails = () => {
 
   // Vegetarian, Vegan, Halal, Kosher, Gluten, Dairy, Eggs, Shellfish, Fish, Peanuts, Tree nuts, Soy, Other
   // Note: we will want this to be stored in the context of the Order
-  const [vegetarian, setVegetarian] = useState('false');
-  const [vegan, setVegan] = useState('false');
-  const [halal, setHalal] = useState('false');
-  const [kosher, setKosher] = useState('false');
-  const [gluten, setGluten] = useState('false');
-  const [dairy, setDairy] = useState('false');
-  const [eggs, setEggs] = useState('false');
-  const [shellfish, setShellfish] = useState('false');
-  const [fish, setFish] = useState('false');
-  const [peanuts, setPeanuts] = useState('false');
-  const [treeNuts, setTreeNuts] = useState('false');
-  const [soy, setSoy] = useState('false');
+  const [vegetarian, setVegetarian] = useState(false);
+  const [vegan, setVegan] = useState(false);
+  const [halal, setHalal] = useState(false);
+  const [kosher, setKosher] = useState(false);
+  const [gluten, setGluten] = useState(false);
+  const [dairy, setDairy] = useState(false);
+  const [eggs, setEggs] = useState(false);
+  const [shellfish, setShellfish] = useState(false);
+  const [fish, setFish] = useState(false);
+  const [peanuts, setPeanuts] = useState(false);
+  const [treeNuts, setTreeNuts] = useState(false);
+  const [soy, setSoy] = useState(false);
   const [dietaryRestrictions, setDietaryRestrictions] = useState('');
 
   // useEffect(()=>{
