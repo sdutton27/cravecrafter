@@ -23,7 +23,7 @@ export default function Home() {
                 }} className="text-lg sm:text-2xl">
                     Let us do the decision making for you.
                 </h3>
-                <SurpriseOrderButton classes="m-3 h-14 px-7"/>
+                <SurpriseOrderButton classes="m-3 h-14 px-7" navTo="/surprise-order/details"/>
             </div>
             <img src={heroImage} style={{ filter: 'brightness(40%)', position: "relative", objectFit: "cover", height: "100vh" }} alt="food" />
             {/* What We Offer Section */}

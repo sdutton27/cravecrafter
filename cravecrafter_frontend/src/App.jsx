@@ -17,6 +17,10 @@ import MainWrapper from './context/MainWrapper';
 import PrivateRoute from './context/PrivateRoute';
 import { OrderDetails } from './pages/OrderDetails/OrderDetails';
 
+import { Loading } from "./components/Loading";
+import { OrderSuccess } from "./components/OrderSuccess";
+import { Tracker } from "./components/Tracker";
+
 function App() {
   return (
     <>
@@ -31,6 +35,9 @@ function App() {
       <Route path="/favorites/restaurants" element={<PrivateRoute><FavoriteRestaurants /></PrivateRoute>}/>
       <Route path="/surprise-order/surprise" element={<PrivateRoute><SurpriseOption /></PrivateRoute>} />
       <Route path="/surprise-order/details" element={<PrivateRoute><OrderDetails /></PrivateRoute>} />
+      <Route path="/surprise-order/loading" element={<PrivateRoute><Loading /></PrivateRoute>} />
+      <Route path="/surprise-order/success" element={<PrivateRoute><OrderSuccess /></PrivateRoute>} />
+      <Route path="/surprise-order/tracker" element={<PrivateRoute><Tracker /></PrivateRoute>} />
     </Routes>
     <Footer /> 
     </MainWrapper>
