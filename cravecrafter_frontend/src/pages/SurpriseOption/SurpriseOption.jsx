@@ -4,6 +4,7 @@ import giftbox from '../../assets/lottie/present.json'
 // import { useLottie } from "lottie-react";
 import Lottie from 'lottie-react';
 
+import { useNavigate } from "react-router-dom";
 
 export const SurpriseOption = () => {
 
@@ -13,6 +14,7 @@ export const SurpriseOption = () => {
   // };
 
   // const { Gift } = useLottie(options);
+  const navigate = useNavigate(); // to nav with button
 
   return (
     <div className="bg-[#7a7a7a] min-h-screen flex items-center justify-center">
@@ -35,7 +37,9 @@ export const SurpriseOption = () => {
         <div className="flex flex-col mt-0">
           <button className="bg-black text-white px-4 py-2 mb-2 rounded-full w-60 border-black
                             self-center border-2 hover:bg-[#FE5100]  hover:text-black hover:border-[#FE5100]
-                             hover:scale-105 transform transition duration-300">
+                             hover:scale-105 transform transition duration-300"
+          onClick={()=>navigate('/surprise-order/loading')}
+          >
             Continue with Surprise
             </button>
           <button className="bg-transparent border-black border-2 text-black px-4 

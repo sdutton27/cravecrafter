@@ -11,12 +11,9 @@ export default function CartButton({classes}) {
         <button 
             // className="nav-button" 
             className={classes}
-            onClick={() => navigate('/cart')}
+            // Right now the button does not link anywhere since that feature has not been added yet
+            // onClick={() => navigate('/cart')}
                 style={{ 
-                        // paddingLeft: 24, 
-                        // paddingRight: 24, 
-                        // paddingTop: 16, 
-                        // paddingBottom: 16, 
                         background: '#050312', 
                         borderRadius: 28, 
                         justifyContent: 'center', 

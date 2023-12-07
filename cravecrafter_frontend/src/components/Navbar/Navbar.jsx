@@ -8,7 +8,7 @@ import logoWhite from '../../assets/images/logo-white.png'
 import logoBlack from '../../assets/images/logo-black.png'
 import ProfileButton from '../ProfileButton/ProfileButton'
 
-export default function Navbar() {
+export default function Navbar({instructions="", navTo="/surprise-order/details"}) {
   const path = useLocation().pathname;
   const location = path.split('/')[1];
   const navigate = useNavigate();
@@ -29,7 +29,7 @@ export default function Navbar() {
   return (
     <div id="navbar" style={{
       position: 'absolute', zIndex: "10", display: "flex",
-      height: '50px', width: '100%',
+      height: '56px', width: '100%',
       backgroundColor: (location === '' ? "transparent" : "#FCFBFA")
     }}>
       <div id="left-nav" style={{ display: "flex", alignSelf: "center" }}>
@@ -63,7 +63,7 @@ export default function Navbar() {
         >
           Favorites
           </Link>
-        <SurpriseOrderButton classes=" h-10 px-5" navTo="/surprise-order/details" />
+        <SurpriseOrderButton classes=" h-10 px-5" instructions={instructions} navTo={navTo} />
         <CartButton classes="h-10 px-5 hover:scale-105 transform transition duration-200" />
         <ProfileButton classes="h-10 w-10 hover:scale-105 transform transition duration-200" />
       </div>

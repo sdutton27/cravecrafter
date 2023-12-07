@@ -1,6 +1,8 @@
 import React from 'react'
 
 export const Tracker = () => {
+  
+
   return (
     <div className="bg-gray-200 min-h-screen flex items-center justify-center">
       {/* Card Container */}
@@ -40,7 +42,7 @@ export const Tracker = () => {
           </div>
         </div>
         <div className="flex justify-between mb-4">
-          
+
         </div>
 
         {/* Subtitle */}
@@ -55,17 +57,21 @@ export const Tracker = () => {
             // src="https://maps.google.com/maps?width=563&amp;height=256&amp;hl=en&amp;q=2200%20212TH%20ST%20OSKALOOSA+(CraveCrafter)&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"/> 
             src="https://maps.app.goo.gl/a4dwrbC4Azfo8DgRA" 
             /> */}
-          <iframe className="rounded-lg" src="https://www.google.com/maps/d/u/0/embed?mid=1uy3RGw_I_TEJAYalE4rdjpLgruxxgiY&ehbc=2E312F&noprof=1" 
-          width="563" height="256" frameborder="0" marginheight="0" marginwidth="0" id="gmap_canvas"
+          <iframe className="rounded-lg" src="https://www.google.com/maps/d/u/0/embed?mid=1uy3RGw_I_TEJAYalE4rdjpLgruxxgiY&ehbc=2E312F&noprof=1"
+            width="563" height="256" frameborder="0" marginheight="0" marginwidth="0" id="gmap_canvas"
           />
-            <a href='https://www.acadoo.de/'></a> 
-            <script type='text/javascript' 
+          <a href='https://www.acadoo.de/'></a>
+          <script type='text/javascript'
             src='https://embedmaps.com/google-maps-authorization/script.js?id=5b5ea4aec97b020cbf3b8a39ec1d67ee007fe5b1'>
-            </script>
+          </script>
         </div>
 
         {/* Button at the bottom */}
         <button className=" text-white px-4 py-2 rounded-full"></button>
+
+        {/* Progress Bar */}
+        
+        
       </div>
     </div>
   )
