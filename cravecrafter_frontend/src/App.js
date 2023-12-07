@@ -8,6 +8,13 @@ import { SurpriseOption } from "./components/SurpriseOption";
 import { Loading } from "./components/Loading";
 import { OrderSuccess } from "./components/OrderSuccess";
 import { Tracker } from "./components/Tracker";
+import { Portion } from "./components/Portion";
+import { OrderEntrees } from "./components/OrderEntrees";
+import { Entrees } from "./components/Entrees";
+import { OrderPortion } from "./components/OrderPortion";
+import { OrderOption } from "./components/OrderOption";
+
+
 
 
 function App() {
@@ -16,13 +23,18 @@ function App() {
       {/* <Login /> */}
       {/* <Signin /> */} 
       {/* <Signup /> */}
-      <SurpriseOption />
-      <Loading />
-      {/* <OrderDetails /> */}
-      <OrderSuccess />
-      <Tracker />
+      { /* <SurpriseOption /> /*}
+      {/* <Loading /> */}
+      <OrderDetails />
+      <Portion />
+      {/* <OrderSuccess /> /*}
+      {/* <Tracker /> */}
       {/* <Checkout /> */}
       {/* <Footer /> */}
+      <OrderEntrees />
+      <Entrees />
+      {/* <OrderPortion /> */}
+      <OrderOption />
 
     </div>
   );

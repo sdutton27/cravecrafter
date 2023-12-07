@@ -9,6 +9,19 @@
   "description": "The repo for the CraveCrafter project. Part of Co.Lab24",
   "version": "1.0.0",
   "main": "index.js",
+  "proxy": {
+    "/api": {
+      "target": "http://localhost:8000",
+      "changeOrigin": true
+    }
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  
   "scripts": {
     "start": "react-scripts start",
     "test": "echo \"Error: no test specified\" && exit 1"
