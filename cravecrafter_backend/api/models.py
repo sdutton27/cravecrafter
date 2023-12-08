@@ -8,6 +8,7 @@ class Restaurant(models.Model):
                           help_text="The unique identifer for this restaurant.")
     name = models.CharField(max_length=200)
     img_url = models.URLField()
+    open_now = models.BooleanField(default=False)
     # menu = models.ForeignKey('Menu', on_delete=models.RESTRICT, null=True)
 
     # menu_items = models.ManyToManyField('MenuItem', related_name="restaurant_with_menu", blank=True)
@@ -38,6 +39,9 @@ class MenuItem(models.Model):
     price_in_cents = models.IntegerField()
     img_url = models.URLField()
     description = models.CharField(max_length=200)
+    available = models.BooleanField()
+    # Not enough time to get the foreign key working using Slug
+    # restaurant = models.CharField(max_length=200)
 
     def __str__(self):
         """String for representing the Model object."""

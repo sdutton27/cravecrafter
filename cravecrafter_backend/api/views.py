@@ -18,7 +18,7 @@ class RestaurantView(viewsets.ModelViewSet):
 def getFavoriteRestaurants(request):
     if request.method == 'GET':
         queryset = Restaurant.objects.filter(favoriters__id=request.user.id)
-        data = serialize("json", queryset, fields=('id', 'name', 'img_url'))
+        data = serialize("json", queryset, fields=('id', 'name', 'img_url', 'open_now'))
         return HttpResponse(data, content_type="application/json")
     
     return Response("This is a GET method", status.HTTP_400_BAD_REQUEST)
@@ -39,7 +39,9 @@ def getFavoriteMenuItems(request):
     if request.method == 'GET':
         queryset = MenuItem.objects.filter(favoriters__id=request.user.id)
         # Check this for getting the restaurant from a menu item
-        data = serialize("json", queryset, fields=('id', 'name', 'price_in_cents', 'img_url', 'description', 'menu_for_item'))
+        data = serialize("json", queryset, fields=('id', 'name', 'price_in_cents', 
+                                                   'img_url', 'description', 'menu_for_item',
+                                                   'available'))
         return HttpResponse(data, content_type="application/json")
     
     return Response("This is a GET method", status.HTTP_400_BAD_REQUEST)

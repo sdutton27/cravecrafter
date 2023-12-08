@@ -9,7 +9,7 @@ from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 class RestaurantSerializer(serializers.ModelSerializer):
     class Meta:
         model = Restaurant
-        fields = ('id', 'name', 'img_url')
+        fields = ('id', 'name', 'img_url', 'open_now')
 
 class MenuSerializer(serializers.ModelSerializer):
     class Meta:
@@ -21,5 +21,6 @@ class MenuItemSerializer(serializers.ModelSerializer):
     class Meta:
         model = MenuItem
         # Check these for the fields
-        fields = ('id', 'name', 'price_in_cents', 'img_url', 'description', 'favoriters', 'menu_for_item')
+        fields = ('id', 'name', 'price_in_cents', 'img_url', 'description', 'favoriters', 
+                  'menu_for_item', 'available')
 

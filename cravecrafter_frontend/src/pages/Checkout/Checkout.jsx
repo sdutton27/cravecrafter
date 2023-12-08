@@ -16,33 +16,22 @@ import { FaTags } from "react-icons/fa";
 import { CiGlobe } from "react-icons/ci";
 import { IoLogoLinkedin } from "react-icons/io";
 
+import Navbar from '../../components/Navbar/Navbar';
 
 export const Checkout = () => {
   return (
-    <div className="max-w-screen-lg mx-auto p-4 h-[1125px] bg-[#f2f0ef]">
+    <div className="min-h-screen flex flex-col ">
       {/* Navbar */}
-      <nav className="flex justify-between items-center bg-[#f2f0ef] p-4">
-        <div className="flex items-center">
-          {/* Logo */}
-          <img src={logo} alt="Logo" className="h-6 w-[180px] ml-6" />
-        </div>
-        <div className="flex items-center space-x-4">
-          <a href="#">About</a>
-          <a href="#">Favorite</a>
-          <button className="flex gap-2 bg-[#FF4700] text-white text-sm px-4 py-2 rounded-full">Surprise Order<GiKnifeFork className="self-center" /></button>
-          <button className="flex gap-2 h-9 bg-black text-white items-center px-4 py-2 rounded-full"><HiShoppingCart className="self-center" />1</button>
-          <div className="text-black px-4 py-2 rounded-full"><FaUserCircle className="h-[36px] w-[36px]" /></div>
-        </div>
-      </nav>
+      <Navbar />
 
       {/* Main Content */}
-      <div className="flex space-x-8 mt-8 justify-center">
+      <div className="flex flex-row space-x-8 mt-16 justify-center">
         {/* Left Column */}
-        <div className="flex flex-col p-4">
+        <div className="flex flex-col p-4 mt-2">
           {/* Logo and Name */}
           <div className="flex items-center mb-4 ml-5">
             <img src={gift} alt="Logo Left" className="h-12 w-12 ml-9" />
-            <span className="text-xl font-bold ml-2">Surprise Favorite Restaurant</span>
+            <span className="text-xl font-bold ml-2">Surprise Restaurant</span>
           </div>
         <div className="flex flex-col w-[500px] h-[850px] p-6 ml-9 bg-[#fdfcfb] shadow-2xl rounded-2xl">
 

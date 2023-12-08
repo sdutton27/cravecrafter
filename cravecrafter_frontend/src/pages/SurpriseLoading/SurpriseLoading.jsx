@@ -1,8 +1,20 @@
-import React from 'react'
-import load from '../assets/load.gif'
+import React, { useEffect }from 'react'
+import load from '../../assets/load.gif'
+
+import { useNavigate } from 'react-router-dom'
 
 
-export const Loading = () => {
+export const SurpriseLoading = () => {
+  const navigate = useNavigate()
+
+  // Automatically load the surprise
+  // I would make sure that this is 
+  useEffect(() => {
+    setTimeout(() => {
+      navigate('/surprise-order/surprise')
+    }, 3000)
+  }, [])
+
   return (
     <div className="bg-gray-300 min-h-screen flex items-center justify-center">
       {/* Card Container */}

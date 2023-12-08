@@ -22,7 +22,7 @@ export default function SurpriseOrderButton({classes, navTo, instructions=""}) {
                         fontFamily: 'Kanit', fontWeight: '500'}}>
                 Surprise Order
             </div>
-            <Random fill='green' stroke='#FE5100'/>
+            <Random stroke='#FE5100'/>
         </button>
     )
 }

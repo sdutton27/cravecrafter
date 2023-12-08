@@ -71,7 +71,7 @@ export default function FavoriteRestaurants() {
             {/* Right now I'm not having this button work since this feature is yet to come! */}
             <SurpriseOrderButton classes=" h-10 px-5" />
         </div>
-        <div className="mt-12 px-4 sm:px-8 md:px-14" style={{ overflow: "hidden" }}>
+        <div className="mt-12 mb-8 px-4 sm:px-8 md:px-14" style={{ overflow: "hidden" }}>
             <div style={{ display: "flex", flexDirection: "row", width: "100%", alignItems: "center", marginRight: "auto"}}>
                 <h3 className="text-2xl">Favorite Restaurants</h3>
                 {/* This will be a drop-down menu to sort things */}

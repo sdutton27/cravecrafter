@@ -186,7 +186,7 @@ export const OrderDetails = () => {
                 />
           </div>
           {/* Button */}
-          <SurpriseOrderButton classes=" h-10 px-5 m-auto mt-4 mb-3" navTo="/surprise-order/surprise" />
+          <SurpriseOrderButton classes=" h-10 px-5 m-auto mt-4 mb-3" navTo="/surprise-order/loading" />
         </div>
         
       </div>
