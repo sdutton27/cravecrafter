@@ -1,1 +1,4 @@
 node_modules
+cravecrafter_backend/*.sqlite3
+# Local Netlify folder
+.netlify

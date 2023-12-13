@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    position: relative;
+    min-height: 100%;
+    width: 100%;
+  }
+/* .logo {
+    text-decoration: none;
+    color: #FCFBFA;
+    font-size: 32px;
+    font-family: 'Kanit';
+    font-weight: 500;
+} */
+
+.footer-label {
+  text-decoration: underline;
+  margin-bottom: 20px;
+}
+
+.footer-text {
+  text-align: left;
+  color: #FCFBFA;
+  font-size: 14px;
+  font-family: 'Epilogue';
+  font-weight: 500;
+}
+
+h3 { 
+  color: black;
+  font-family: 'Kanit';
+  font-weight: 500;
+}
+
+h4 {
+  color: #050312;
+  font-family: 'Epilogue';
+  font-weight: 500;
+}
+
+.epilogue {
+  font-family: 'Epilogue';
+}
+
+.kanit {
+  font-family: 'Kanit';
+}
+
+.fade-appear,
+.fade-enter {
+opacity: 0;
+z-index: 1;
+}
+.fade-appear-active,
+.fade-enter.fade-enter-active {
+opacity: 1;
+transition: opacity 450ms linear 250ms;
+}
+.fade-exit {
+opacity: 1;
+}
+.fade-exit.fade-exit-active {
+opacity: 0;
+transition: opacity 150ms linear;
+}
+
+/* Progress Bar */
+
+#delivery-estimates label {
+  /* display: inline-block; */
+  width: 352px;
+  padding: 10px;
+  border: solid 2px #ccc;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+#delivery-estimates input[type="radio"] {
+  display: none;
+}
+
+#delivery-estimates input[type="radio"]:checked + label {
+  border-radius: 5px;
+  border: solid 2px black;
+}

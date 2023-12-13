@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
-import os
+from datetime import timedelta # for User
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -20,16 +20,29 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-o2(e!t41(m$fo#9^2nqw6w(c#t$e&xf2z0bhev0lb&4@-&q4^4'
+# # SECURITY WARNING: keep the secret key used in production secret!
+# SECRET_KEY = 'django-insecure-u&3-&u^xa7(-gzl9)k%5$0xo@jp)62#^+a!0x*gn!00+c(!y&a'
+import os
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-u&3-&u^xa7(-gzl9)k%5$0xo@jp)62#^+a!0x*gn!00+c(!y&a')
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# DEBUG = True
+DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
-ALLOWED_HOSTS = []
+# ADDED FOR CORS:
+CORS_ORIGIN_WHITELIST = [
+    'http://localhost:3000',
+]
 
-# NOTE THIS IS BECAUSE WE HAVE NOT HOSTED THINGS YET
-CORS_ORIGIN_ALLOW_ALL = True
+# For deployment
+ALLOWED_HOSTS = [
+    'cravecrafter-production.up.railway.app', '127.0.0.1', 'localhost',
+    #'http://localhost:3000'
+]
+
+# For deployment
+CSRF_TRUSTED_ORIGINS = ['https://cravecrafter-production.up.railway.app']
 
 
 # Application definition
@@ -41,12 +54,17 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework', #previously installed
-    'corsheaders', #previously installed
-    'database', # Database
+    'api.apps.ApiConfig', # added for api/ app
+    'corsheaders', # CORS
+    'rest_framework', # REST framework
+    # 'rest_framework_simplejwt',
+    'rest_framework_simplejwt.token_blacklist',
+    'auth.apps.AuthConfig', # added for api/ app
+    'rest_framework.authtoken',
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -54,18 +72,16 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'corsheaders.middleware.CorsMiddleware', # applies CORS logic
-    'django.middleware.common.CommonMiddleware', #applies CORS logic
 ]
 
 ROOT_URLCONF = 'cravecrafter_backend.urls'
 
-# WE SWITCHED 'APP_DIRS': True, to FALSE FOR MONOREPO
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
-        'APP_DIRS': False,
+        # 'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],
+        'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
@@ -90,23 +106,24 @@ DATABASES = {
     }
 }
 
+AUTH_USER_MODEL = 'auth.User'
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
-    {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
-    },
+    # {
+    #     'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+    # },
     {
         'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
     },
-    {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
-    },
-    {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
-    },
+    # {
+    #     'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+    # },
+    # {
+    #     'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+    # },
 ]
 
 
@@ -127,18 +144,61 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-# for monorepo
-STATICFILES_DIRS = [os.path.join(BASE_DIR, "../../cravecrafter_frontend/build/static")]
-
-# 
-WEBPACK_LOADER = {
-    'DEFAULT': {
-        'BUNDLE_DIR_NAME': 'static/',
-        'STATS_FILE': os.path.join(BASE_DIR, "../../cravecrafter_frontend/build/asset-manifest.json"),
-    }
-}
-
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Auth class, added in
+REST_FRAMEWORK = {
+#     'DEFAULT_PERMISSION_CLASSES': [
+#         'rest_framework.permissions.IsAuthenticated', 
+#      ],
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ],
+    # 'DEFAULT_RENDERER_CLASSES': [
+    #     'rest_framework.renderers.JSONRenderer',
+    # ]
+}
+
+
+# Added for Authentication:
+SIMPLE_JWT = {
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=5),
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=50),
+    'ROTATE_REFRESH_TOKENS': True,
+    'BLACKLIST_AFTER_ROTATION': True,
+    'UPDATE_LAST_LOGIN': False,
+
+    'ALGORITHM' : 'HS256',
+
+    'VERIFYING_KEY': None,
+    'AUDIENCE': None,
+    'ISSUER' : None,
+    'JWK_URL' : None,
+    'LEEWAY' : 0,
+
+    'AUTH_HEADER_TYPES': ('Bearer','JWT',),
+    # 'AUTH_HEADER_TYPES': ('JWT',),
+    'AUTH_HEADER_NAME': 'HTTP_AUTHORIZATION',
+    'USER_ID_FIELD' : 'id',
+    'USER_ID_CLAIM' : 'user_id',
+    'USER_AUTHENTICATION_RULE' : 'rest_framework_simplejwt.authentication.default_user_authentication_rule',
+
+    'AUTH_TOKEN_CLASSES' : ('rest_framework_simplejwt.tokens.AccessToken',),
+    'TOKEN_TYPE_CLAIM' : 'token_type',
+    'TOKEN_USER_CLASS' : 'rest_framework_simplejwt.models.TokenUser',
+
+    'JTI_CLAIM' : 'jti',
+
+    'SLIDING_TOKEN_REFRESH_EXP_CLAIM' : 'refresh_exp',
+    'SLIDING_TOKEN_LIFETIME': timedelta(minutes=5),
+    'SLIDING_TOKEN_REFRESH_LIFETIME': timedelta(days=1),
+}
+
+# Also for Auth
+CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_CREDENTIALS = True

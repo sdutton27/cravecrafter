@@ -55,7 +55,58 @@ SIMON:
 
 =========
 
+Notes:
+
+    - when pip installing something, make sure it gets added to the document requirements.txt
+        you can do this by typing, after the pip install:
+            pip freeze > requirements.txt 
+            (note: you should still be in the venv)
+
+
+=========
+
 Tutorials:
 
     To make a mono-repo with React/Django:
     https://awstip.com/harnessing-the-synergy-of-django-and-react-in-monorepo-projects-f40701ce86ce
+
+=========
+
+How to make a new page: (for example '/checkout'):
+
+1. in src/views/ 
+    - make a new folder, give it the title of whatever view you are making. ie. Checkout 
+    - make a new file in that folder, give it the same title. ie. Checkout.jsx 
+2. inside the file you just made (<WhateverViewYouWantToCreate>.jsx):
+    - type "rfc" and then click the autocompletion. this will fill the document with a couple of things:
+        import React from 'react'
+
+        export default function Checkout() {
+        // here is where our JavaScript code will go, with variables and such.
+        return (
+            /* the return statement is where all of our HTML-like code will go */
+            <div>
+                // everything on the page needs to be put within this div.
+                Checkout
+            </div>
+        )
+
+        }
+    - right now this is making a View which just states in plain text what the view is.
+
+3. Go to src/App.jsx 
+    - inside <Routes> create a new Route:
+        <Route path="/checkout" element={<Checkout />} />
+                     ^ the path             ^ the new component in Views
+    - make sure you import the Checkout element at the top of the page
+        import Checkout from './views/Checkout/Checkout';
+
+Now when you navigate to localhost:3000/checkout, it will show you the title "Checkout"
+
+===========
+Django Auth Tutorial:
+
+Part 1:
+https://blog.devgenius.io/django-rest-framework-react-authentication-workflow-2022-part-2-d299b7fef875
+Part 2:
+https://blog.devgenius.io/django-rest-framework-react-authentication-workflow-2022-part-2-d299b7fef875

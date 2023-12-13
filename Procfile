@@ -1,0 +1,1 @@
+web: cd cravecrafter_backend && python manage.py migrate && gunicorn cravecrafter_backend.wsgi
